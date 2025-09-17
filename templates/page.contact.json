@@ -1,0 +1,304 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_block_VhPDUc": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify://shop_images/0923_EGPC-13.jpg",
+        "mobile_image": "shopify://shop_images/0923_EGPC-13.jpg",
+        "subheading": "Need help!?",
+        "title": "We're standing by.",
+        "content": "<p>Give us a call. We're always happy to help out. If that's some free friendly advice. Or you're hunting down that ideal PC for you. No matter if that's a gaming pc, a business pc, or a combination of both!</p>",
+        "button_text": "Further questions",
+        "button_link": "shopify://pages/faq",
+        "background_type": "full_width",
+        "text_position": "left",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "fe1eb6f2-4bba-4bb4-a5af-ac1d53dad3d1": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/fill_up_day.png",
+        "subheading": "",
+        "title": "Contact",
+        "content": "<p><strong>We've gathered together some common answers to questions about topics like shipping, returns, warranty, and other things we've been asked about.</strong></p><p></p><h4>Visit our <a href=\"/pages/faq\" title=\"FAQ\"><strong>FAQ </strong></a>for answers to these and other questions.</h4>",
+        "button_text": "",
+        "button_link": "#",
+        "link_style": "button",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_left",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 49
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "text_3FWRT8": {
+          "type": "text",
+          "settings": {
+            "title": "Phone Number",
+            "use_long_text": false,
+            "is_required": true
+          }
+        }
+      },
+      "block_order": [
+        "text_3FWRT8"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "",
+        "content": "<p>Have a question? Check our <a href=\"/pages/faq\" title=\"FAQ\">FAQ </a>or give us a call.</p><p>If you are an existing customer needing help Call 1300 282 433 or email us here <a href=\"mailto:admin@evolvegamingpc.com.au\" title=\"mailto:admin@evolvegamingpc.com.au\">admin@evolvegamingpc.com.au</a></p>",
+        "text_1_heading": "",
+        "text_1_text": "",
+        "text_2_heading": "",
+        "text_2_text": "<p>More ways to contact:</p>",
+        "contact_details_email": "admin@evolvegamingpc.com.au",
+        "contact_details_location": "COMPUTER STORE 125 Kellerman Dr, St Helens Park, NSW 2560",
+        "contact_details_phone": "1300 282 433",
+        "contact_details_hours_a": "9:00AM till 7:00PM MON-SUN",
+        "contact_details_hours_b": "",
+        "background": "#171717",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "3a386b78-1571-4113-bb9f-ff5f711c0316": {
+      "type": "custom-html",
+      "custom_css": [
+        ".es-widget-title-container {display: none;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<script src=\"https://static.elfsight.com/platform/platform.js\" data-use-service-core defer></script>\n<div class=\"elfsight-app-8e1197a0-50e2-42e4-a988-75b018988490\" data-elfsight-app-lazy></div>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "273afacb-dde8-43c9-976a-faf0fba6f6c0": {
+      "type": "gallery",
+      "blocks": {
+        "template--20503774429458__273afacb-dde8-43c9-976a-faf0fba6f6c0-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-7-1.jpg",
+            "caption": ""
+          }
+        },
+        "template--20503774429458__273afacb-dde8-43c9-976a-faf0fba6f6c0-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-5-1.jpg",
+            "caption": ""
+          }
+        },
+        "template--20503774429458__273afacb-dde8-43c9-976a-faf0fba6f6c0-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-6-1.jpg",
+            "caption": ""
+          }
+        },
+        "ba76d4c7-bd31-4a92-93a7-829d7745d355": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-14.png",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20503774429458__273afacb-dde8-43c9-976a-faf0fba6f6c0-image-1",
+        "template--20503774429458__273afacb-dde8-43c9-976a-faf0fba6f6c0-image-2",
+        "template--20503774429458__273afacb-dde8-43c9-976a-faf0fba6f6c0-image-3",
+        "ba76d4c7-bd31-4a92-93a7-829d7745d355"
+      ],
+      "settings": {
+        "subheading": "Custom high powered gaming pcs",
+        "title": "Pick your parts",
+        "show_arrows": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "arrow_bg_color": "#7800ff",
+        "arrow_icon_color": "#ffffff"
+      }
+    },
+    "01a518c3-675c-4178-aac1-2175eba23603": {
+      "type": "multi-column",
+      "blocks": {
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-1": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "PERFORMANCE",
+            "content": "<p>A custom PC from Radium offers unparalleled performance, tailored to<br/>your specific needs for the ultimate gaming or content creation<br/>experience</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-2": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "EXPERT TECHNICIANS",
+            "content": "<p>Trust in the hands of skilled technicians, who use the latest technology to craft each custom machine with precision and passion</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-3": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "STABILITY & STRESS TESTED",
+            "content": "<p>Each custom PC is rigorously tested for stability and reliability,<br/>ensuring that your machine can handle even the most demanding<br/>applications</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-4": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "INDUSTRY READY",
+            "content": "<p>Stay ahead of the competition with a custom PC designed for the demands<br/>of the industry, perfect for gaming, content creation, or demanding<br/>workloads</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "8d934801-d08c-403c-a189-a6e300d2629d": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "3 YEAR WARRANTY",
+            "content": "<p>Invest with confidence in your custom PC, backed by a comprehensive 3-year warranty for peace of mind</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-1",
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-2",
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-3",
+        "template--20503774429458__01a518c3-675c-4178-aac1-2175eba23603-item-4",
+        "8d934801-d08c-403c-a189-a6e300d2629d"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "3 YEAR WARRANTY - EXPERTLY CRAFTED - ANY NEED",
+        "title": "EXPERIENCE CUSTOM POWER",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "9b0261a7-9256-447d-93db-3145526e5e4f": {
+      "type": "slideshow-style-2",
+      "blocks": {
+        "template--20503774429458__9b0261a7-9256-447d-93db-3145526e5e4f-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-4.png",
+            "text_position": "middle_left",
+            "subheading": "",
+            "title": "Power At",
+            "title_2": "Your Fingertips",
+            "slidercontent": "Australia's bespoke PC builders",
+            "button_1_text": "View Details",
+            "button_1_link": "shopify://collections/all",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#7fd000",
+            "button_background": "#7808ff",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--20503774429458__9b0261a7-9256-447d-93db-3145526e5e4f-image-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "image_with_text_block_VhPDUc",
+    "main",
+    "fe1eb6f2-4bba-4bb4-a5af-ac1d53dad3d1",
+    "contact-form",
+    "3a386b78-1571-4113-bb9f-ff5f711c0316",
+    "273afacb-dde8-43c9-976a-faf0fba6f6c0",
+    "01a518c3-675c-4178-aac1-2175eba23603",
+    "9b0261a7-9256-447d-93db-3145526e5e4f"
+  ]
+}

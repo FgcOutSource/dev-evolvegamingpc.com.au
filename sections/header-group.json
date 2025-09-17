@@ -1,0 +1,133 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message-1": {
+          "type": "message",
+          "settings": {
+            "text": "Free Shipping | Unbeatable Prices | Ready in Days",
+            "learn_more_text": "Learn more",
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "message-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 55;}"
+      ],
+      "settings": {
+        "announcement_bar_position": "sticky",
+        "announcement_text_size": "large",
+        "autoplay": false,
+        "cycle_speed": 5,
+        "background": "#22727d",
+        "text_color": "#ffffff",
+        "button_background": "#56112a",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "e7008950-a038-4e84-9741-3ad162e486da": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_item": "test",
+            "images_position": "left",
+            "image_1": "shopify://shop_images/NewApollo.jpg",
+            "image_1_heading": "testttttt",
+            "image_1_text": "88888888",
+            "image_1_link": "shopify://collections/evolve-gaming-pc",
+            "image_2": "shopify://shop_images/20230314_193548.jpg",
+            "image_2_heading": "44",
+            "image_2_text": "55",
+            "image_2_link": "shopify://collections/services",
+            "image_3": "shopify://shop_images/0124_EGPC-10.png",
+            "image_3_heading": "44",
+            "image_3_text": "77",
+            "image_3_link": "shopify://collections/gaming-pcs-under-2-000",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        },
+        "mega_menu_g7Yt9M": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_item": "gaming",
+            "images_position": "right",
+            "image_1_heading": "",
+            "image_1_text": "",
+            "image_1_link": "",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": "",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e7008950-a038-4e84-9741-3ad162e486da",
+        "mega_menu_g7Yt9M"
+      ],
+      "settings": {
+        "enable_sticky_header": true,
+        "logo": "shopify://shop_images/Evolve-Gaming-PC-logo_490x_8d0dd441-b2bc-4865-a07f-3abb337c5637.png",
+        "logo_max_width": 245,
+        "mobile_logo_max_width": 210,
+        "navigation_menu": "main-menu",
+        "sidebar_navigation_menu": "main-menu",
+        "header_layout": "logo_left_navigation_inline",
+        "show_icons": true,
+        "reduce_desktop_padding": true,
+        "show_locale_selector": false,
+        "show_country_selector": false,
+        "enable_transparent_header": false,
+        "transparent_header_text_color": "#ffffff",
+        "search_menu": "",
+        "store_phone": "1300 282 433"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

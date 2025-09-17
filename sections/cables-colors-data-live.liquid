@@ -1,0 +1,88 @@
+<style>
+.cables-colors-data{
+	display: none;
+}
+</style>
+
+{% if section.blocks.size > 0 %}
+<section class="cables-colors-data">
+    <div class="color-container">  
+	  <div class="main-color" 
+	  	data-title="{{ section.settings.title }}"
+		data-img="{{ section.settings.color_image | img_url: '600x600' }}"
+	  	>
+	  </div>
+	  <!-- main color -->  
+	</div>
+	<div class="sub-color-container">
+	  {%- for block in section.blocks -%} 
+	  
+	  <div class="sub-color" 
+	  	data-title="{{ block.settings.title }}"
+		data-img="{{ block.settings.color_image | img_url: '600x600' }}"
+        data-focal_point="{{ block.settings.color_image.presentation.focal_point }}"
+	  	>
+	  </div>
+
+	  {% endfor %}
+	  <!-- sub color -->  
+	</div>
+ </section>
+ {% endif %}
+
+{% schema %}
+
+{
+  "name": "Cables Colors Data",
+  "class": "shopify-section--cables-colors-data",
+  "disabled_on": {
+    "groups": ["custom.overlay"]
+  },
+  "max_blocks": 50,
+  "blocks": [
+      {
+        "type": "color",
+        "name": "Color item",
+        "settings": [
+          	{
+		      "type": "header",
+		      "content": "Color"
+		    },
+		    {
+			   "type": "text",
+			   "id": "title",
+			   "label": "Title"
+			},
+			{
+		      "type": "image_picker",
+		      "id": "color_image",
+		      "label": "Color image",
+		      "info": "400 x 400px .jpg recommen."
+		    }
+        ]
+      }
+  ],
+  "settings": [
+  	{
+      "type": "header",
+      "content": "Main Color"
+    },
+    {
+	   "type": "text",
+	   "id": "title",
+	   "label": "Title"
+	},
+	{
+      "type": "image_picker",
+      "id": "color_image",
+      "label": "Color image",
+      "info": "400 x 400px .jpg recommen."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cables Colors Data"
+    }
+  ]
+}
+{% endschema %}

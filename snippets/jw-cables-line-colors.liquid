@@ -1,0 +1,1846 @@
+{%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
+{%- assign color_white_label = 'general.label.white' | t | downcase -%}
+{%- assign size_label_list = 'general.label.size' | t | replace: ', ', ',' | downcase | split: ',' -%}
+{%- assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id -%}
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<style>
+  #shopify-section-{{ section.id }} {
+  {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+  {%- assign section_background = settings.background -%}
+  {%- else -%}
+  {%- assign section_background = section.settings.background -%}
+  {%- endif -%}
+
+  {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+  {%- assign heading_color = settings.heading_color -%}
+  {%- assign text_color = settings.text_color -%}
+  {%- else -%}
+  {%- assign heading_color = section.settings.text_color -%}
+  {%- assign text_color = section.settings.text_color -%}
+  {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --prev-next-button-background: {{ settings.background.red }}, {{ settings.background.green }}, {{ settings.background.blue }};
+    --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
+
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+    --section-products-per-row: 2;
+  }
+
+  @media screen and (min-width: 741px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: 3;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: 4;
+    }
+  }
+  .prev-next-button {
+    background-color: #7800ff;
+    color: #ffffff;
+  }
+
+  .button{
+    --primary-button-background: 120, 8, 255;
+    --primary-button-text-color: 255, 255, 255;
+    --button-background: var(--primary-button-background);
+    --button-text-color: var(--primary-button-text-color);
+
+    background-image: linear-gradient(178deg,rgb(var(--button-background)),rgb(var(--button-background)) 10%,#00000012 10% 100%),linear-gradient(rgb(var(--button-background)),rgb(var(--button-background)));
+    background-size: 100% 200%,100% 100%;
+    background-position: 100% -100%,100% 100%;
+    background-repeat: no-repeat;
+    transition: background-position .3s cubic-bezier(.215,.61,.355,1);
+    transform: translateZ(0);
+  }
+
+  .next-tips{
+    /* display: none; */
+  }
+
+  .color-container {
+    margin-bottom: 20px;
+  }
+
+  .color-container{
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0px 0 40px;
+  }
+  .sub-color-container-holder{
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .sub-color-container-holder{
+    /* flex-direction: column; */
+    /* height: 240px !important; */
+  }
+  @media (min-width:768px) {
+    .sub-color-container-holder{
+      /* flex-direction: column; */
+      height: auto;
+      width: 100% !important;
+    }
+  }
+  .color-container .main-color{
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+  }
+  .color-container .main-color span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+  }
+
+  .color-container .main-color img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 9999px;
+    border: 2px solid black;
+  }
+  .color-container .main-color.active span{
+    border: 2px solid #fff;
+  }
+  .color-container .main-color.active:after{
+    display:inline-block;
+    content:"";
+    width: 17px;
+    height: 15px;
+    text-shadow: #000 0 0 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url({{ 'check.svg' | asset_url }});
+    background-size: cover;
+
+  }
+  #sub-color-container{
+    overflow: hidden;
+  }
+  .sub-color-container {
+    /* margin-top: 10px;  */
+    -webkit-user-select: none;
+    user-select: none;
+    /* overflow: hidden; */
+    min-height: 180px;
+    margin-bottom: 60px;
+  }
+
+  .sub-color-container .sub-color{
+    border: 2px solid black;
+    /* display: inline-block; */
+    margin: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    /* position: relative; */
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+  }
+
+  .sub-color-container .sub-color img{
+    object-fit: cover;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+    display: none;
+  }
+  .sub-color-container .sub-color.active{
+    border: 2px solid #fff;
+  }
+  .sub-color-container .sub-color.active:after{
+    display:inline-block;
+    content:"";
+    width: 17px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url({{ 'check.svg' | asset_url }});
+    background-size: cover;
+
+  }
+  .sub-color-container >p{
+    margin-bottom: 60px;
+  }
+  .sub-color-container .sub-color-container-holder{
+    display: none;
+  }
+
+  .cable-select select{
+    background: #262626;
+    padding: 5px;
+  }
+  .cable-color-tips{
+    /* display: none; */
+  }
+  .cable-container{
+    /* display: none; */
+    width: fit-content;
+    margin-top: 10px;
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+  }
+  .cable-wrapper{
+    position: relative;
+    padding-bottom: 160px;
+  }
+  .cable-plugin-wrapper{
+    /* position: relative; */
+    /* height: 105px; */
+    position: absolute;
+  }
+  .cable-plugin-wrapper .box{
+    max-width: 460px;
+    bottom: 16px;
+    left: 0px;
+    position: relative;
+    max-height: 210px;
+  }
+  .cable-plugin-wrapper .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .cable-container .cable-color{
+    display: inline-block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    width: 21px;
+    height: 275px;
+  }
+  @media (min-width:380px) {
+    .cable-container .cable-color{
+      width: 23px;
+      height: 306px;
+    }
+  }
+  @media (min-width:420px) {
+    .cable-container .cable-color{
+      width: 26px;
+      height: 340px;
+    }
+  }
+  @media (min-width:1280px) {
+    .cable-container .cable-color{
+      width: 32px;
+      height: 426px;
+    }
+  }
+  .cable-container .cable-color:not(:last-child){
+    margin-right: 6px;
+  }
+  .cable-container .cable-color img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    display: none;
+  }
+  .container .product .product__info{
+    width: 100%;
+  }
+  .product__info .product-meta{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .product__info .product-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .product__info .product-form .product-form__description{
+    text-align: center;
+    max-width: 610px;
+  }
+  .jw-color-selector{
+    width: 100%;
+    min-height: 700px;
+  }
+  .jw-color-selector .jw-container>p{
+    font-size: 20px;
+  }
+  .buy_button_section{
+    width: 100%;
+  }
+  .cable-line-customization{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  @media (min-width:1024px) {
+    .jw-color-selector{
+      display: flex;
+      position: relative;
+    }
+    .jw-color-selector>div{
+      width: 50%;
+    }
+    .cable-line-customization{
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-left: 100px;
+      padding-right: 100px;
+      width: calc((100vw - 80px)/2 );
+      max-width: calc((1600px - 80px)/2 );
+    }
+    .buy_button_section{
+      display: flex;
+      margin-top: 100px;
+    }
+    .buy_button_section>div{
+      width: 50%;
+    }
+    .buy_button_section .right{
+      padding-left: 0px;
+      padding-right: 100px;
+    }
+  }
+  @media (min-width:1600px) {
+
+  }
+  .buy_button_section .cable-plug-color,
+  .jw-color-selector .cable-comb-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  @media (min-width:1024px) {
+    .buy_button_section .cable-plug-color,
+    .jw-color-selector .cable-comb-color{
+      display: block;
+    }
+  }
+  .buy_button_section .cable-plug-color .options,
+  .jw-color-selector .cable-comb-color .options{
+    display: flex;
+  }
+  .buy_button_section .cable-plug-color .options .item,
+  .jw-color-selector .cable-comb-color .options .item{
+    cursor: pointer;
+    border: 2px solid #000;
+    max-width: 170px;
+    max-height: 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+  }
+  .buy_button_section .cable-plug-color .options .item img,
+  .jw-color-selector .cable-comb-color .options .item img{
+    max-height: 45px;
+  }
+  .buy_button_section .cable-plug-color .options .item:not(:last-child),
+  .jw-color-selector .cable-comb-color .options .item:not(:last-child){
+    margin-right: 20px;
+  }
+  .buy_button_section .cable-plug-color .options .item.active,
+  .jw-color-selector .cable-comb-color .options .item.active{
+    border: 2px solid #FFF;
+
+    /* selected option shadow */
+    box-shadow: 0px -2px 80px 0px rgba(255, 255, 255, 0.07), 0px -0.836px 33.422px 0px rgba(255, 255, 255, 0.11), 0px -0.447px 17.869px 0px rgba(255, 255, 255, 0.13), 0px -0.25px 10.017px 0px rgba(255, 255, 255, 0.15), 0px -0.133px 5.32px 0px rgba(255, 255, 255, 0.19), 0px -0.055px 2.214px 0px rgba(255, 255, 255, 0.26);
+
+  }
+  .buy_button_section .cable-plug-color >p,
+  .jw-color-selector .cable-comb-color >p{
+    font-size: 20px;
+  }
+  .product-meta:not(.jw-custom){
+    display: none;
+  }
+  .product-meta.jw-custom p{
+    max-width: 610px;
+  }
+  .price-list{
+    /* display: none; */
+  }
+  .combo-box__option-item:hover, .combo-box__option-item:focus {
+    background: rgb(148, 148, 148);
+  }
+  .product-form div:nth-child(5) p:nth-child(2){
+    background-image: none !important;
+  }
+  .jw-product-variants .config-title{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .buy_button_section #AddToCart{
+    padding:0;
+    border-radius: 50px;
+    background: #773CFF;
+  }
+  .combo-box + .select{
+    border-radius: 25px;
+    width: fit-content;
+  }
+  @media (min-width:768px) {
+    .combo-box + .select{
+      min-width: 400px;
+    }
+  }
+  .product-form__option-info, .product-form__quantity-label{
+    justify-content: center;
+  }
+  .jw-product-variants .config-title{
+    text-align: center;
+  }
+  .jw-product-variants .select-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  .product-form div:nth-child(5) p:nth-child(1){
+    text-align: center;
+  }
+  .product-form__option-name{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .cable-set-section{
+    padding-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .no-margin-bottom{
+    margin-bottom: 0;
+  }
+  .hide{
+    display: none;
+  }
+  @media (min-width:1024px) {
+    .cable-set-section{
+
+    }
+    .new-video-wrapper{
+
+    }
+  }
+  .cable-set-section>.box>p{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%; /* 35px */
+  }
+  .cable-set-section>.box .jw-set-radio{
+    gap: 100px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 20px;
+    width: auto;
+    margin: 0 auto;
+  }
+  @media (min-width:428px) {
+    .cable-set-section>.box .jw-set-radio{
+      width: 380px;
+    }
+  }
+  @media (min-width:1440px) {
+    .cable-set-section>.box .jw-set-radio{
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
+  }
+  .cable-set-section>.box .jw-set-radio .item{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .cable-set-section>.box .jw-set-radio .item:not(.active) svg>circle:nth-child(2){
+    opacity: 0;
+  }
+  .cable-set-section>.box.set-holder:not(.active){
+    display: none;
+  }
+  .cable-set-section>.box.set-holder{
+  }
+  .cable-set-section>.box.set-holder .heading{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%; /* 35px */
+  }
+  .cable-set-section>.box.set-holder .set-wrapper{
+    /* display: flex;
+    flex-wrap: wrap; */
+    width: 100%;
+  }
+  .cable-set-section>.box.set-holder .set-wrapper .item{
+    border: 2px solid transparent;
+    cursor: pointer;
+    width: calc(((100vw - 24px*2 - 10px * 2) / 2) - 15px);
+    height: calc(((100vw - 24px*2 - 10px * 2) / 2) - 15px);
+    max-width: 250px;
+    max-height: 250px;
+  }
+  @media (min-width:550px) {
+    .cable-set-section>.box.set-holder .set-wrapper .item{
+      border: 2px solid transparent;
+      cursor: pointer;
+      width: calc(((100vw - 24px*2 - 30px * 2) / 2) - 15px);
+      height: calc(((100vw - 24px*2 - 30px * 2) / 2) - 15px);
+    }
+  }
+  @media (min-width:768px) {
+    .cable-set-section>.box.set-holder .set-wrapper .item{
+      border: 2px solid transparent;
+      cursor: pointer;
+      width: calc(((100vw - 40px*2 - 30px * 2) / 3));
+      height: calc(((100vw - 40px*2 - 30px * 2) / 3));
+
+      max-width: 228px;
+      max-height: 228px;
+    }
+  }
+  @media (min-width:850px) {
+    .cable-set-section>.box.set-holder .set-wrapper .item{
+      border: 2px solid transparent;
+      cursor: pointer;
+      width: calc(((100vw - 40px*2 - 30px * 3) / 4));
+      height: calc(((100vw - 40px*2 - 30px * 3) / 4));
+    }
+  }
+  @media (min-width:1024px) {
+    .cable-set-section>.box.set-holder .set-wrapper .item{
+      border: 2px solid transparent;
+      cursor: pointer;
+      width: calc(((100vw - 40px*2 - 30px * 4) / 5));
+      height: calc(((100vw - 40px*2 - 30px * 4) / 5));
+    }
+  }
+  @media (min-width:1280px) {
+    .cable-set-section>.box.set-holder .set-wrapper .item{
+      border: 2px solid transparent;
+      cursor: pointer;
+      width: calc(((100vw - 40px*2 - 30px * 5) / 6));
+      height: calc(((100vw - 40px*2 - 30px * 5) / 6));
+    }
+  }
+  .cable-set-section>.box.set-holder .set-wrapper .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cable-set-section>.box.set-holder .set-wrapper .item:not(:last-child){
+    margin-right: 10px;
+  }
+  @media (min-width:550px) {
+    .cable-set-section>.box.set-holder .set-wrapper .item:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+  .cable-set-section>.box.set-holder .set-wrapper .item.active{
+    border: 2px solid #FFF;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    /* selected option shadow */
+    box-shadow: 0px -2px 80px 0px rgba(255, 255, 255, 0.07), 0px -0.836px 33.422px 0px rgba(255, 255, 255, 0.11), 0px -0.447px 17.869px 0px rgba(255, 255, 255, 0.13), 0px -0.25px 10.017px 0px rgba(255, 255, 255, 0.15), 0px -0.133px 5.32px 0px rgba(255, 255, 255, 0.19), 0px -0.055px 2.214px 0px rgba(255, 255, 255, 0.26);
+  }
+  .slick-prev::before, .slick-next::before{
+    font-size: 25px;
+  }
+  .slick-prev, .slick-next{
+    width: 25px;
+    height: 25px;
+  }
+  .cart-notification__overflow{
+    background: #2E1569;
+  }
+  .container .product .product__media{
+    display: none;
+  }
+  @media only screen and (max-width: 750px) {
+    .footer__follow-and-payment{
+      flex-wrap: wrap;
+    }
+  }
+  .shopify-section--video{
+    display: none;
+  }
+  .two-column-wrapper{
+
+  }
+  .two-column-wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  .two-column-wrapper .column header{
+    display: none;
+  }
+  .two-column-wrapper .column:nth-child(1){
+    width: 100%;
+  }
+  .two-column-wrapper .column:nth-child(2){
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  @media (min-width:1024px) {
+    .two-column-wrapper .column:nth-child(1){
+      width: 55%;
+    }
+    .two-column-wrapper .column:nth-child(2){
+      width: 45%;
+      margin-bottom: 0px;
+    }
+  }
+  .jw-warning{
+    color:#d32020 ;
+    background:none !important;
+  }
+  .product-item__image-wrapper {
+    width: 100%;
+  }
+  .product-list__inner{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .related_products{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .product-item {
+    justify-content: flex-start;
+    width: 250px;
+  }
+  .product-item__image-wrapper::before{
+    display:none;
+  }
+  .product-list .product-item__image-wrapper {
+    height: 80px;
+    padding: 0 20px;
+    padding-bottom: 0px;
+    border-radius: 0;
+  }
+  .product-item__primary-image{
+    object-fit: contain !important;
+    border: #000 solid 2px;
+    border-radius: 0;
+  }
+  .product-list--center .product-list__inner{
+    justify-content: flex-start;
+  }
+  .product-item__image-wrapper {
+    margin-bottom: 16px;
+  }
+  .related_products .product-form__payment-container{
+    width: fit-content !important;
+  }
+  .related_products .loader-button__text{
+    height: 30px;
+    font-size: 10px !important;
+  }
+  .related_products .product-form__payment-container button{
+    padding: 0 20px;
+  }
+  .cable-comb-color{
+    width: 100%;
+    margin-top: 100px;
+  }
+  .cable-comb-color p{
+    font-size: 20px;
+  }
+  @media screen and (max-width: 999px) {
+    .related_products .product-list__inner--scroller {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .related_products .product-item{
+      width: 48%;
+    }
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+{% comment %} <script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script> {% endcomment %}
+<script src="//npmcdn.com/isotope-masonry-horizontal@2/masonry-horizontal.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var cable_type={};
+  var mainColor={};
+  var suits=[];
+  var color = {};
+  var swiper=null;
+  var product_list=[];
+  var selectedProduct;
+  function sanitizeTitle(title) {
+    // Convert the title to lowercase
+    title = title.toLowerCase();
+
+    // Replace accented characters with their non-accented equivalents
+    title = title.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+
+    // Replace any non-alphanumeric characters with a dash
+    title = title.replace(/[^a-z0-9\s-]/g, '');
+
+    // Replace multiple spaces or dashes with a single dash
+    title = title.replace(/[\s-]+/g, '-');
+
+    // Remove leading and trailing dashes
+    title = title.replace(/^-+|-+$/g, '');
+
+    return title;
+  }
+  var genMainColorHtml=function(color){
+    var html=``;
+    var i=0;
+    for(var name in color){
+      html+=`<div class="main-color" title="${name}">
+                <span style="background: linear-gradient(225deg, ${color[name][0]} 0%, ${color[name][1]} 100%);"></span>
+                </div>`;
+      i++;
+    }
+    $("#color-container").html(html);
+  }
+  var genSubColorHtml=function(color,activeColor){
+    var html=``;
+    var i=0;
+    html+=`<div class="sub-color-container swiper-wrapper">
+              <p>Please select the main color first</p>
+              <div class="sub-color-container-holder swiper-slide">`;
+    for(var url in color){
+      var classes = color[url]["mainColorList"].join(" ");
+      var focalPoint = color[url]["focalPoint"];
+      html+=`
+                <div class="sub-color ${classes}" style="background: url(${url}) no-repeat;background-size: cover;background-position:${focalPoint};">
+                  <img src="${url}" style="opacity:0">
+                </div>
+              `;
+    }
+    html+=`</div>
+            </div>`;
+    $("#sub-color-container").html(html);
+  }
+
+  var genSuitHtml=function(data){
+    var html="";
+    var cableType = $("select[name='option1']").children("option:selected").attr("data-value");
+    for(var i in data){
+      var cableType = sanitizeTitle(data[i]["cableType"]);
+      html+=`<div class="item ${cableType}" data-line="${data[i]["line"]}"><img src="${data[i]["img"]}"/></div>`;
+    }
+    $(".cable-set-section").find(".set-wrapper").html(html);
+
+    // if($(".suit-slider-wrapper").hasClass("slick-initialized")){
+    //   $(".suit-slider-wrapper").slick("unslick");
+    // }
+    $(".suit-slider-wrapper").slick({
+      slidesToShow:6,
+      slidesToScroll:1,
+      arrows: true,
+      variableWidth: true,
+      responsive:[
+        {
+          breakpoint:768,
+          settings:{
+            slidesToScroll:1,
+            slidesToShow:2,
+            arrows: false,
+          }
+        }
+      ]
+    });
+  }
+
+  var updateCables=function(val){
+    var cableType = val||$("select[name='option1']").children("option:selected").attr("data-value");
+    var cableInfo = cable_type[cableType];
+    var num = cableInfo["num"];
+    var white_cable_plug = cableInfo["white_plug"];
+    var black_cable_plug = cableInfo["black_plug"];
+    var actual_num = cableInfo["actual_num"];
+
+    // console.log(num,cable_plug,cableType);
+    var html=``;
+    $(".input_line").remove();
+    var default_line_src="//cdn.shopify.com/s/files/1/0807/0522/4978/files/black_600x600.png?v=1717122930";
+    for(var i=0;i<num;i++){
+      html+=`<div class="cable-color" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 90%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(180deg, #262626 0%, rgba(38, 38, 38, 0.80) 10.5%, rgba(38, 38, 38, 0.00) 35.5%), url(${default_line_src}) lightgray 50% / cover no-repeat; ">
+              <img src="${default_line_src}">
+            </div>`;
+      initialCableLine(i, default_line_src);
+    }
+    $(".cable-container").html(html);
+
+    $(".cable-plug-color").find(".black").children("img").attr("src", black_cable_plug);
+    $(".cable-plug-color").find(".white").children("img").attr("src", white_cable_plug);
+
+    var connector = white_cable_plug;
+    if($(".cable-plug-color").find(".white").hasClass("active")){
+      connector = white_cable_plug;
+    }
+    if($(".cable-plug-color").find(".black").hasClass("active")){
+      connector = black_cable_plug;
+    }
+
+    $(".cable-plugin-wrapper").children(".box").find("img").attr("src",connector);
+    initialConnector(connector);
+
+    $(".related_products").find("product-item").each((idx, obj)=>{
+      if($(obj).attr("data-tags").toLowerCase().indexOf(actual_num)!=-1){
+        $(obj).show();
+      }else{
+        $(obj).hide();
+      }
+    })
+  }
+
+  var bindCablesAction=function(){
+    // console.error("sub_color_img")
+    $(".cable-container").children(".cable-color").on("click",function(){
+      var sub_color_img = $('.sub-color-container').find(".sub-color.active").children("img").attr("src");
+      // console.log("sub_color_img",sub_color_img)
+      if(sub_color_img){
+        // if($(this).hasClass("selected")){
+        //     $(this).removeClass("selected");
+        //     var source_src=$(this).find("img").attr("data-source-src");
+        //     $(this).find("img").attr("src",source_src);
+        //     $(this).css("background",`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 90%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(180deg, #262626 0%, rgba(38, 38, 38, 0.80) 10.5%, rgba(38, 38, 38, 0.00) 35.5%), url(${source_src}) lightgray 50% / cover no-repeat`)
+        // }else{
+        $(this).addClass("selected");
+        var source_src=$(this).find("img").attr("src");
+        $(this).find("img").attr("data-source-src",source_src);
+        $(this).find("img").attr("src",sub_color_img);
+        $(this).css("background",`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 90%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(180deg, #262626 0%, rgba(38, 38, 38, 0.80) 10.5%, rgba(38, 38, 38, 0.00) 35.5%), url(${sub_color_img}) lightgray 50% / cover no-repeat`)
+        line_index=$(this).index();
+        // }
+        updateCableLine();
+      }
+    })
+  };
+  var bindSuitAction=function(){
+    $(".cable-set-section").find(".set-wrapper").find(".item").on("click",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      var lineList = $(this).attr("data-line").split("\n");
+      var i=0;
+      for(var idx in lineList){
+        var simpleName = lineList[idx];
+        $(".sub-color-container-holder").find(".sub-color").each((idx,obj)=>{
+          var src = $(obj).children("img").attr("src");
+          var filename = src.split('/').pop().split('?')[0];
+          var title = filename.split("_600x600").shift();
+          // console.log("==========",simpleName,title);
+          if(simpleName==title){
+            // console.log("==========select:",simpleName,title);
+            var tarObj = $(".cable-container").children(".cable-color").eq(i);
+            tarObj.css("background",`linear-gradient(rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(rgb(38, 38, 38) 0%, rgba(38, 38, 38, 0.8) 10.5%, rgba(38, 38, 38, 0) 35.5%), lightgray url(${src}) 50% center / cover no-repeat`);
+            tarObj.addClass("selected");
+            if(tarObj.children("img").attr("data-source-src")==null){
+              tarObj.children("img").attr("data-source-src",tarObj.children("img").attr("src"));
+            }
+            tarObj.children("img").attr("src",src);
+          }
+        });
+        i++;
+      }
+      updateCableLine();
+    })
+  }
+
+  var initialConnector=function(src){
+    $(".input_connector").remove();
+    // var filename = src.split('/').pop().split('?')[0];
+    // var name = filename.split("_600x600").shift();
+    var name="Black";
+    $("form").not(".related_products_form").append(`<input type="hidden" class="input__connector" name="properties[_connector]" value="${src}"/>`);
+    $("form").not(".related_products_form").append(`<input type="hidden" class="input_connector" name="properties[_name connector color]" value="${name}"/>`);
+    $("form").not(".related_products_form").append(`<input type="hidden" class="input_cable_type" name="properties[Cable Type]" value="NORMAL Extension Sleeve Cables"/>`);
+    // $("form").not(".related_products_form").append(`<input type="hidden" class="input_cable_type_image" name="properties[cable type image]" value="/cdn/shop/files/our_cables_custom_sleeve_cables.png"/>`);
+  }
+  var initialCableLine=function(idx,line_src){
+    var filename = line_src.split('/').pop().split('?')[0];
+    var name = filename.split("_600x600").shift();
+    $("form").not(".related_products_form").append(`<input type="hidden" class="input_line input__line_${idx+1}" name="properties[_Strand${idx+1}]" value="${line_src}"/>`);
+    $("form").not(".related_products_form").append(`<input type="hidden" class="input_line input_line_${idx+1}" name="properties[_name Strand${idx+1}]" value="${name}"/>`);
+  }
+  var initialForm=function(){
+    var cable_type = $("select[name='option1']").children("option:selected").attr("data-value");
+
+    // $("form").not(".related_products_form").append(`<input type="hidden" class="input_option1" name="option1" value="${cable_type}"/>`);
+
+    $("form").not(".related_products_form").append(`<input type="hidden" class="input__connector" name="properties[_connector]" value=""/>`);
+    $("form").not(".related_products_form").append(`<input type="hidden" class="input_connector" name="properties[_name connector color]" value=""/>`);
+    // $("form").append(`<input type="hidden" class="input_comb" name="properties[_name comb]" value="Black"/>`);
+  }
+
+  var updateCableType=function(){
+    var cable_type = $("select[name='option1']").children("option:selected").attr("data-value");
+
+    // $(".input_option1").val(cable_type);
+
+    product_list.map((obj, idx)=>{
+      // console.log("=============",idx,obj);
+      if(obj.name==cable_type){
+        selectedProduct = obj;
+      }
+    });
+
+    const queryString = selectedProduct.url.split('?')[1];
+
+    // 分割查询字符串获取 variant 值
+    const params = new URLSearchParams(queryString);
+    const variant = params.get('variant');
+
+    history.pushState(null, '', selectedProduct.url);
+
+    $("form").not(".related_products_form").find("input[name='id']").val(variant);
+
+    console.log("selectedProduct", selectedProduct)
+  }
+  var updateCableLine=function(){
+    var disabled_btn=false;
+    $(".cable-container").children(".cable-color").each((idx,obj)=>{
+
+      if($(obj).hasClass("selected")==false){
+        disabled_btn=true;
+      }
+      var src = $(obj).children("img").attr("src");
+      var filename = src.split('/').pop().split('?')[0];
+      var name = filename.split("_600x600").shift();
+      $(".input__line_"+(idx+1)).val(src);
+      $(".input_line_"+(idx+1)).val(name);
+    });
+
+    if(disabled_btn){
+      $(".jw-warning").show();
+      // $("#AddToCart").attr("disabled",true);
+      $("#AddToCart").css("opacity",0.8);
+      $("#AddToCart").css("cursor","not-allowed");
+      $(".prostickyfooter").find("button.sticky-btn").attr("disabled",true);
+      $(".prostickyfooter").find("button.sticky-btn").css("opacity",0.8);
+      $(".prostickyfooter").find("button.sticky-btn").css("cursor","not-allowed");
+    }else{
+      $(".jw-warning").hide();
+      // $("#AddToCart").removeAttr("disabled",true);
+      $("#AddToCart").css("opacity",1);
+      $("#AddToCart").css("cursor","pointer");
+      $(".prostickyfooter").find("button.sticky-btn").removeAttr("disabled",true);
+      $(".prostickyfooter").find("button.sticky-btn").css("opacity",1);
+      $(".prostickyfooter").find("button.sticky-btn").css("cursor","pointer");
+    }
+  }
+  var updateCableConnector=function(){
+    var src = $(".cable-plug-color").find(".item.active").children("img").attr("src");
+    // var filename = src.split('/').pop().split('?')[0];
+    // var name = filename.split("_600x600").shift();
+    var idx = $(".cable-plug-color").find(".item.active").index();
+    var name = idx == 1? "White":"Black";
+    $(".input__connector").val(src);
+    $(".input_connector").val(name);
+  }
+  // var updateCableComb=function(){
+  //   // var filename = src.split('/').pop().split('?')[0];
+  //   // var name = filename.split("_600x600").shift();
+  //   var idx = $(".cable-comb-color").find(".item.active").index();
+  //   var name = idx == 1? "White":"Black";
+  //   $(".input_comb").val(name);
+  // }
+  var updatePrice=function(){
+    // var price = $("select[name='option1']").children("option:selected").attr("value").match(/<b>([^<]*)<\/b>/)[1];
+    var price = selectedProduct.price;
+    var oldText = $("#AddToCart").find(".loader-button__text").html().split(" - ").pop();
+    $("#AddToCart").find(".loader-button__text").html(`<b>$${price}&nbsp;</b> - `+oldText);
+    $(".prostickyfooter").find(".right-price").text(`$${price}`);
+  }
+  var updateColorLayout=function(){
+    return;
+    var windowWidth = $("body").width();
+    if(windowWidth<768){
+      isotopeContainer.isotope({
+        layoutMode: 'masonryHorizontal',
+      });
+    }else{
+      console.log("fitRows")
+      isotopeContainer.isotope({
+        layoutMode: 'fitRows',
+        horizontalOrder: true // 水平顺序排列
+      });
+    }
+  }
+  $(document).ready(function() {
+    $(window).resize(function(){
+
+      updateColorLayout();
+      // swiper.isotope('reLayout');
+      // console.log("width:",$("body").width())
+    });
+    $('script[type="application/ld+json"]').each(function() {
+      try {
+        // 获取 <script> 标签中的内容
+        const jsonData = $(this).text();
+
+        // 解析 JSON 数据
+        const data = JSON.parse(jsonData);
+
+        // 根据 @type 属性处理数据
+        if (data['@type'] === 'Product') {
+          product_list=data["offers"];
+          // console.log('Product data:', data);
+        } else if (data['@type'] === 'Offer') {
+          console.log('Offer data:', data);
+        }
+        // 根据需要添加更多条件
+
+      } catch (error) {
+        console.error('Error parsing JSON:', error);
+      }
+    });
+
+    $(".cable-selection input[type='radio']").on("change", function () {
+
+      const cableType = $(this).siblings("span").text();
+      const cableImage = $(this).parent().siblings("img").attr("src");
+
+      $(".input_cable_type").val(cableType);
+      // $(".input_cable_type_image").val(cableImage);
+
+      console.log('test');
+    });
+
+    // console.log("product_list",product_list)
+
+    $(".cables-main-colors-data").find(".main-color").each((idx,obj)=>{
+      var colorList=[];
+      colorList.push($(obj).attr("data-start-color"));
+      colorList.push($(obj).attr("data-end-color"));
+      mainColor[$(obj).attr("data-title")]=colorList;
+    });
+    $(".cables-colors-data").each((idx,obj)=>{
+      $(obj).find(".sub-color").each((index,object)=>{
+        var url = $(object).attr("data-img");
+        var focalPoint = $(object).attr("data-focal_point");
+        let fileName = url.split('/').pop().split('?')[0];
+        let mainColors = fileName.split('_')[0];
+        let mainColorList = mainColors.split('-').map(function(obj){
+          // console.log("=====================",obj)
+          return obj.toLowerCase();
+        });
+        color[url]={
+          "mainColorList":mainColorList,
+          "focalPoint":focalPoint,
+        };
+      })
+    });
+    $(".cables-suit-data").find(".suit").each((idx,obj)=>{
+      // console.log("============",obj)
+      suits.push({
+        "title":$(obj).attr("data-title"),
+        "cableType":$(obj).attr("data-cable-type"),
+        "line":$(obj).attr("data-line-img"),
+        "img":$(obj).attr("data-suit-image"),
+      })
+    });
+    // console.error("suits",suits)
+
+    $(".cables-type-data").find(".plugs").each((idx,obj)=>{
+      cable_type[$(obj).attr("data-title")]={
+        "num":$(obj).attr("data-pin-num"),
+        "actual_num":$(obj).attr("data-actual-pin-number"),
+        "white_plug":$(obj).attr("data-white-plug-img"),
+        "black_plug":$(obj).attr("data-black-plug-img")
+      };
+    });
+
+    var sub_color_id="";
+    var sub_color_img="";
+    var line_index=0;
+    genMainColorHtml(mainColor);
+    genSubColorHtml(color);
+    genSuitHtml(suits);
+
+    isotopeContainer = $(".sub-color-container-holder");
+
+    updateColorLayout();
+
+    swiper = new Swiper("#sub-color-container", {
+      // direction: "vertical",
+      slidesPerView: "auto",
+      freeMode: true,
+      // scrollbar: {
+      //   el: ".swiper-scrollbar",
+      // },
+      // mousewheel: true,
+    });
+
+    $(".cable-plug-color").find(".item").on("click",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+
+      var img_src = $(this).children("img").attr("src");
+      $(".cable-plugin-wrapper").find("img").attr("src",img_src);
+
+      updateCableConnector();
+    });
+
+    // $(".cable-comb-color").find(".item").on("click",function(){
+    //   $(this).addClass("active").siblings().removeClass("active");
+
+    //   updateCableComb();
+    // })
+
+    $(".jw-set-radio").children(".item").on("click",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      // console.log("============",$(this).index())
+      if($(this).index()==1){
+        $(".set-holder-wrapper").removeClass("hide");
+        $(".cable-set-section").find(".set-holder").addClass("active");
+      }else{
+        $(".set-holder-wrapper").addClass("hide");
+        $(".cable-set-section").find(".set-holder").removeClass("active");
+      }
+    })
+    bindSuitAction();
+
+    var i = null;
+    $('.main-color').click(function() {
+      var comboFilter="";
+
+      $(this).toggleClass('active');
+      var condition1=[];
+      $("#color-container").children("div.active").each((idx,obj)=>{
+        condition1.push("."+$(obj).attr("title").toLowerCase());
+      });
+      comboFilter=condition1.join("");
+      if(condition1.length>0){
+        $(".sub-color-container").children("p").hide();
+        $(".sub-color-container").children(".sub-color-container-holder").show();
+
+        // console.log("=============",comboFilter);
+        isotopeContainer.isotope({filter: comboFilter});
+        updateColorLayout();
+      }else{
+        $(".sub-color-container").children("p").show();
+        $(".sub-color-container").children(".sub-color-container-holder").hide();
+        if(isotopeContainer){
+          isotopeContainer.isotope('destroy')
+        }
+      }
+    });
+    $('.sub-color-container .sub-color').click(function(){
+      $(this).addClass('active').siblings().removeClass('active');
+    });
+    initialForm();
+
+    updateCables();
+    bindCablesAction();
+    updateCableType();
+    updatePrice();
+    $("select[name='option1']").on("change",function(){
+      var val = $(this).children("option:selected").attr("data-value");
+      // console.log("============",$(this).val().match(/<b>([^<]*)<\/b>/)[1]);
+      if(val){
+        updateCables(val);
+        bindCablesAction();
+        updateCableType();
+
+        var cableType = sanitizeTitle(val);
+        $(".suit-slider-wrapper").slick('slickUnfilter');
+        $(".suit-slider-wrapper").slick('slickFilter','.'+cableType);
+
+        updatePrice();
+
+        setTimeout(function(){
+          // console.log("=================",val + " - <b>$"+selectedProduct.price+"</b>")
+          $(".select__selected-value").html(val + " -&nbsp;<b>$"+selectedProduct.price+"</b>");
+        },50);
+      }
+    });
+    var cableTypeVal = $("select[name='option1']").children("option:selected").attr("data-value");
+    var cableType = sanitizeTitle(cableTypeVal);
+    $(".suit-slider-wrapper").slick('slickFilter','.'+cableType);
+
+    //copy video
+    var html = $(".shopify-section--video").find(".container").html();
+    $(".new-video-wrapper").html(html);
+
+    // $("#AddToCart").attr("disabled",true);
+    $("#AddToCart, .prostickyfooter button.sticky-btn").on("click",function(){
+      var disabled_btn=false;
+      $(".cable-container").children(".cable-color").each((idx,obj)=>{
+        if($(obj).hasClass("selected")==false){
+          disabled_btn=true;
+        }
+      });
+      if(disabled_btn){
+        $(".jw-warning").show();
+        return false;
+      }
+      return true;
+    });
+    $(".jw-warning").hide();
+    $("#AddToCart").css("opacity",0.8);
+    $("#AddToCart").css("cursor","not-allowed");
+    $(".prostickyfooter").find("button.sticky-btn").attr("disabled",true);
+    $(".prostickyfooter").find("button.sticky-btn").css("opacity",0.8);
+    $(".prostickyfooter").find("button.sticky-btn").css("cursor","not-allowed");
+  });
+</script>
+<!-- PRODUCT META -->
+<product-meta form-id="{{ product_form_id }}" price-class="price--large" class="product-meta jw-custom">
+  <h1 class="product-meta__title heading h3">{{ product.title }}</h1>
+  {{ product.description }}
+</product-meta>
+<div class="two-column-wrapper">
+  <div class="column">
+    <section class="jw-product-variants">
+      <div class="box">
+
+        <p class="config-title">Configure Your Cable Colors</p>
+        {%- unless product.has_only_default_variant or block.settings.hide_sold_out_variants and product.available == false -%}
+          {%- assign size_chart_page = block.settings.size_chart_page -%}
+          {%- assign found_size_option = false -%}
+
+          <product-variants handle="{{ product.handle }}" form-id="{{ product_form_id }}" {% if update_url %}update-url{% endif %} {% if block.settings.hide_sold_out_variants %}hide-sold-out-variants{% endif %} class="product-form__variants" {{ block.shopify_attributes }}>
+            {%- for option in product.options_with_values -%}
+              {%- assign option_downcase = option.name | downcase -%}
+              {%- capture option_id -%}option-{{ section.id }}-{{ template.suffix }}-{{ product.id }}-{{ forloop.index }}{%- endcapture -%}
+
+              {%- assign selector_type = "dropdown" -%}
+
+              {% if color_label_list contains option_downcase %}
+                {%- assign selector_type = block.settings.color_mode -%}
+
+                {%- if selector_type == 'variant_image' -%}
+                  {%- comment -%}To use this mode every variant must have an attached media{%- endcomment -%}
+                  {%- for variant in product.variants -%}
+                    {%- unless variant.featured_media -%}
+                      {%- assign selector_type = 'color' -%}
+                      {%- break -%}
+                    {%- endunless -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endif -%}
+
+              <div class="product-form__option-selector" data-selector-type="{{ selector_type | replace: '_', '-' | escape }}">
+                <div class="product-form__option-info">
+                  <span class="product-form__option-name">Select a cable</span>
+                </div>
+
+                {%- case selector_type -%}
+
+                  {%- when 'dropdown' -%}
+                    <div class="select-wrapper">
+                      <combo-box initial-focus-selector="[aria-selected='true']" id="{{ option_id }}-combo-box" class="combo-box">
+                        <span class="combo-box__overlay"></span>
+
+                        <header class="combo-box__header">
+                          <p class="combo-box__title heading h6">{{ option.name }}</p>
+
+                          <button type="button" class="combo-box__close-button tap-area" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
+                            {%- render 'icon' with 'close' -%}
+                          </button>
+                        </header>
+
+                        <div class="combo-box__option-list" role="listbox">
+                          {%- for value in option.values -%}
+                            {%- assign prices = "" -%}
+                            {%- for variant in product.variants -%}
+                              {%- if value==variant.title -%}
+                                {%- assign prices = variant.price -%}
+                                {%- break -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            <button type="button" role="option" class="combo-box__option-item" value="{{ value | escape }}" aria-selected="{% if value == option.selected_value %}true{% else %}false{% endif %}">{{ value }} -&nbsp;<b>{{prices | money}}</b></button>
+                          {%- endfor -%}
+                        </div>
+
+                        <select class="visually-hidden" name="option{{ option.position }}" form="{{ product_form_id }}" data-bind-value="{{ option_id }}-value" aria-label="{{ option.name | escape }}">
+                          {%- for value in option.values -%}
+                            {%- assign prices = "" -%}
+                            {%- for variant in product.variants -%}
+                              {%- if value==variant.title -%}
+                                {%- assign prices = variant.price -%}
+                                {%- break -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            <option data-value="{{ value | escape }}" value="{{ value | escape }}" {% if value == option.selected_value %}selected{% endif %}>{{ value }}</option>
+                          {%- endfor -%}
+                        </select>
+                      </combo-box>
+
+
+                      {%- assign prices = "" -%}
+                      {%- for variant in product.variants -%}
+                        {%- if option.selected_value==variant.title -%}
+                          {%- assign prices = variant.price -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      <button type="button" is="toggle-button" class="select" aria-expanded="false" aria-haspopup="listbox" aria-controls="{{ option_id }}-combo-box">
+                        <span id="{{ option_id }}-value" class="select__selected-value">{{ option.selected_value }} -&nbsp;<b>{{prices | money}}</b></span>
+                        {%- render 'icon' with 'chevron' -%}
+                      </button>
+                    </div>
+                {%- endcase -%}
+              </div>
+            {%- endfor -%}
+
+            <noscript>
+              <label class="input__block-label" for="product-select-{{ section.id }}-{{ product.id }}">{{ 'product.form.variant' | t }}</label>
+
+              <div class="select-wrapper">
+                <select class="select" autocomplete="off" id="product-select-{{ section.id }}-{{ product.id }}" name="id" form="{{ product_form_id }}">
+                  {%- for variant in product.variants -%}
+                    {%- assign prices = "" -%}
+                    {%- for variant in product.variants -%}
+                      {%- if value==variant.title -%}
+                        {%- assign prices = variant.price -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} {% unless variant.available %}disabled="disabled"{% endunless %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                  {%- endfor -%}
+                </select>
+
+                {%- render 'icon' with 'chevron' -%}
+              </div>
+            </noscript>
+          </product-variants>
+        {%- endunless -%}
+      </div>
+    </section>
+    <section class="cable-set-section no-margin-bottom">
+      <div class="box">
+        <p>Select a base customisation option</p>
+        <div class="jw-set-radio">
+          <div class="item active">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" stroke="#555555"/>
+              <circle cx="16" cy="16" r="8" fill="#773CFF"/>
+            </svg>
+            <span>Full Customisation - Paint It Your Way</span>
+          </div>
+          <div class="item">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" stroke="#555555"/>
+              <circle cx="16" cy="16" r="8" fill="#773CFF"/>
+            </svg>
+            <span>Start from our Predefined Cable Templates </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="column new-video-wrapper">
+  </div>
+</div>
+<section class="cable-set-section set-holder-wrapper hide">
+  <div class="box set-holder">
+    <p class="heading">Predefined Cables</p>
+    <p>Our Predefined Cables are ready to purchase as is, or you can add further customisation below.</p>
+    <div class="set-wrapper suit-slider-wrapper"></div>
+  </div>
+</section>
+<section class="jw-color-selector {% if section.settings.add_vertical_spacing %}section{% endif %} {% unless blends_with_background or is_boxed %}section--flush{% endunless %}">
+  <div {% if is_boxed %}class="container"{% endif %}>
+    <div class="section__color-wrapper {% if is_boxed %}section__color-wrapper--boxed{% endif %}">
+      <div class="{% unless is_boxed %}jw-container{% endunless %}">
+        <p>1.Select a main color</p>
+
+        <div class="color-container" id="color-container"></div>
+        <p class="next-tips">
+          2.Select a sub-color
+        </p>
+        <div id="sub-color-container" class="swiper"></div>
+
+        <div class="cable-line-customization">
+          <p class="cable-color-tips">3.Customise Cables</p>
+          <p>Click on the wires you want to paint.</p>
+          <div class="cable-wrapper">
+            <div class="cable-container">
+
+            </div>
+            <div class="cable-plugin-wrapper">
+              <div class="box">
+                <img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/Connector-13.png?v=1716450481">
+              </div>
+            </div>
+          </div>
+          <p class="warning jw-warning">Please paint all the cables</p>
+        </div>
+        {% comment %} <div class="cable-comb-color">
+          <p class="cable-color-tips">5.Select a Comb</p>
+          <div class="options">
+            <div class="item black active">
+              <p>Black</p>
+            </div>
+            <div class="item white">
+              <p>White</p>
+            </div>
+          </div>
+        </div> {% endcomment %}
+
+      </div>
+    </div>
+  </div>
+  <div class="right_blank">
+
+  </div>
+</section>
+
+<div class="buy_button_section">
+  <div class="left">
+    <div class="cable-plug-color">
+      <p class="cable-color-tips">4.Select a Connector Colour</p>
+      <div class="options">
+        <div class="item black active">
+          <p>Black</p>
+          <img src=""/>
+        </div>
+        <div class="item white">
+          <p>White</p>
+          <img src=""/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="title-cable-wrapper">
+  <p class="cable-color-tips">5. Which Cable Type?</p>
+</div>
+<div class="cable-selection">
+  <div class="option">
+    <label>
+      <div class="label-content">
+        <input type="radio" name="cable" value="NORMAL Extension Sleeve Cables" checked />
+        <span>NORMAL Extension Sleeve Cables</span>
+      </div>
+      <img src="/cdn/shop/files/our_cables_custom_sleeve_cables.png" alt="Normal Extension Sleeve Cables" />
+    </label>
+  </div>
+  <div class="option">
+    <label>
+      <div class="label-content">
+        <input type="radio" name="cable" value="SINGULARITY Powerboard Cables" />
+        <span>SINGULARITY Powerboard Cables</span>
+      </div>
+      <img src="/cdn/shop/files/Red_and_Orange_PC_Extension_Sleeve_Custom_Cables_1.png" alt="Singularity Powerboard Cables" />
+    </label>
+  </div>
+</div>
+
+<style>
+
+  .title-cable-wrapper{
+    width:100%
+  }
+
+  .title-cable-wrapper .cable-color-tips{
+    font-size:20px
+  }
+  
+  .cable-selection {
+    display: flex;
+    gap: 100px; 
+    width: 100%;
+  }
+
+  .cable-selection .option {
+    flex: 0 1 auto; 
+    max-width: 380; 
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+
+  .cable-selection label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; 
+    cursor: pointer;
+  }
+
+  .label-content {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 5px; 
+  }
+
+  .cable-selection input[type="radio"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+
+  .cable-selection input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  .cable-selection input[type="radio"]:checked::before {
+    background-color: #7808ff;
+  }
+
+  .cable-selection span {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .cable-selection img {
+    width: 100%; 
+  height: 250px;
+    max-height:250px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  }
+
+  .cable-selection input[type="radio"]:checked + span + img {
+    border-color: #7808ff;
+  }
+
+  .custom-add-tocart-wrapper{
+    margin-top:50px!important;
+  }
+
+  @media (max-width: 767px) {
+    .cable-selection {
+      flex-direction: column; 
+      gap: 10px;
+    }
+
+    .cable-selection .option {
+      width: 100%; 
+    }
+
+    .custom-add-tocart-wrapper{
+    margin-top:20px!important;
+  }
+
+    .title-cable-wrapper .cable-color-tips{
+       text-align: center;
+  }
+  }
+</style>
+
+<div class="buy_button_section custom-add-tocart-wrapper" >
+  <div class="right">
+    {%- if request.page_type != 'password' -%}
+      <div class="product-form__buy-buttons" {{ block.shopify_attributes }}>
+        {%- form 'product', product, is: 'product-form', id: product_form_id -%}
+          {%- if product.gift_card? and block.settings.show_gift_card_recipient -%}
+            <gift-card-recipient class="gift-card-recipient">
+              <div class="input input--checkbox">
+                <div class="checkbox-container">
+                  <input type="checkbox" class="checkbox" name="properties[__shopify_send_gift_card_to_recipient]" id="product-{{ section.id }}-{{ product.id }}-send-gift-card-to-recipient">
+                  <label for="product-{{ section.id }}-{{ product.id }}-send-gift-card-to-recipient" class="text--subdued">{{ 'gift_card.recipient.checkbox' | t }}</label>
+                </div>
+              </div>
+
+              <div class="gift-card-recipient__fields js:hidden">
+                <div class="input">
+                  <input id="product-{{ section.id }}-{{ product.id }}-recipient-email" type="email" class="input__field input__field--text" name="properties[Recipient email]" required value="{{ form.email }}">
+                  <label for="product-{{ section.id }}-{{ product.id }}-recipient-email" class="input__label">{{ 'gift_card.recipient.email_label' | t }}</label>
+                </div>
+
+                <div class="input">
+                  <input id="product-{{ section.id }}-{{ product.id }}-recipient-name" type="text" class="input__field input__field--text" name="properties[Recipient name]" value="{{ form.name }}">
+                  <label for="product-{{ section.id }}-{{ product.id }}-recipient-name" class="input__label">{{ 'gift_card.recipient.name_label' | t }}</label>
+                </div>
+
+                <div class="input">
+                  <textarea id="product-{{ section.id }}-{{ product.id }}-recipient-message" rows="4" class="input__field input__field--textarea" name="properties[Recipient message]">{{ form.message }}</textarea>
+                  <label for="product-{{ section.id }}-{{ product.id }}-recipient-message" class="input__label">{{ 'gift_card.recipient.message_label' | t }}</label>
+                </div>
+              </div>
+            </gift-card-recipient>
+          {%- endif -%}
+
+          <input type="hidden" disabled name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+          <product-payment-container form-id="{{ product_form_id }}" {% if update_url %}id="MainPaymentContainer"{% endif %} class="product-form__payment-container" {{ block.shopify_attributes }}>
+            <button id="AddToCart" type="submit" is="loader-button" {% unless block.settings.show_payment_button and template.suffix != 'quick-buy-popover' %}data-use-primary{% endunless %} data-product-add-to-cart-button data-button-content="{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t | escape }}{% else %}{{ 'product.form.add_to_cart' | t | escape }}{% endif %}" class="product-form__add-button button {% unless product.selected_or_first_available_variant.available %}button--ternary{% else %}{% if block.settings.show_payment_button and template.suffix != 'quick-buy-popover' %}button--secondary{% else %}button--primary{% endif %}{% endunless %} button--full" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+              {%- if product.selected_or_first_available_variant.available -%}
+                {%- if product.template_suffix == 'pre-order' -%}
+                  {{- 'product.form.pre_order' | t -}}
+                {%- else -%}
+                  {{- 'product.form.add_to_cart' | t -}}
+                {%- endif -%}
+              {%- else -%}
+                {{- 'product.form.sold_out' | t -}}
+              {%- endif -%}
+            </button>
+            {% if product.metafields.custom.popup_video != blank %}
+              <button type="button" onclick="openPopup()" id="openpopup">Watch in action</button>
+            {% endif %}
+
+          </product-payment-container>
+
+          {%- if block.settings.show_payment_button and template.suffix != 'quick-buy-popover' -%}
+            <div class="payment_method">
+              {{ form | payment_button }}
+
+              {%- unless product.selected_or_first_available_variant.available -%}
+                <style>
+                  #shopify-section-{{ section.id }} .shopify-payment-button {
+                    display: none;
+                  }
+                </style>
+              {%- endunless -%}
+            </div>
+          {%- endif -%}
+
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+
+    {%- if template.suffix != 'quick-buy-popover' -%}
+      <store-pickup form-id="{{ product_form_id }}" class="product-form__store-availability-container">
+        {%- render 'store-availability', product_variant: product.selected_or_first_available_variant -%}
+      </store-pickup>
+    {%- endif -%}
+  </div>
+</div>
+
+<div class="cable-comb-color">
+  <p class="cable-color-tips">6. Select a Comb</p>
+</div>
+<section class="related_products">
+  <product-list class="product-list product-list--center became-visible">
+    {%- assign smallest_image_aspect_ratio = 0 -%}
+
+    <div class="product-list__inner product-list__inner--scroller product-list__inner--desktop-no-scroller hide-scrollbar">
+      {% for product in collections['Combs'].products %}
+        {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
+        {%- assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id -%}
+
+        <product-item class="product-item {% unless product.available %}product-item--sold-out{% endunless %}" {% if reveal %}reveal{% endif %} data-tags="{%- for tag in product.tags -%}{{ tag | split: ':' | last }} {%- endfor -%}">
+          <div class="product-item__image-wrapper aspect-ratio {% if settings.show_secondary_image and product.media.size > 1 and hide_secondary_image != true %}product-item__image-wrapper--multiple{% endif %}">
+            {% if product.metafields.custom.inline_video_url %}
+              <video class="lazy" autoplay muted loop playsinline poster="{{ product.featured_media | image_url: width: product.featured_media.width }}">
+                <source data-src="{{ product.metafields.custom.inline_video_url  }}" type="video/mp4">
+              </video>
+            {% else %}
+              {%- if product.featured_media -%}
+                {{ product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__primary-image', data-media-id: product.featured_media.id }}
+              {%- endif -%}
+            {% endif %}
+          </div>
+          {{- product.title | link_to: product.url }}
+
+          {%- if product.price_varies and product.compare_at_price -%}
+            {%- assign cheapest_variant = product.variants | sort: 'price' | first -%}
+
+            {%- capture price_min -%}
+              {%- if settings.currency_code_enabled -%}
+                {{- cheapest_variant.price | money_with_currency -}}
+              {%- else -%}
+                {{- cheapest_variant.price | money -}}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- if cheapest_variant.price < cheapest_variant.compare_at_price -%}
+              <span class="price price--highlight">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+              {{- 'collection.product.from_price_html' | t: price_min: price_min -}}
+            </span>
+
+              <span class="price price--compare">
+              <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+
+              {%- if settings.currency_code_enabled -%}
+                {{- cheapest_variant.compare_at_price | money_with_currency -}}
+              {%- else -%}
+                {{- cheapest_variant.compare_at_price | money -}}
+              {%- endif -%}
+            </span>
+            {%- else -%}
+              <span class="price">
+              <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+              {{- 'collection.product.from_price_html' | t: price_min: price_min -}}
+            </span>
+            {%- endif -%}
+          {%- elsif product.price < product.compare_at_price -%}
+            <span class="price price--highlight">
+            <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+            {%- if settings.currency_code_enabled -%}
+              <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{- product.price | money_with_currency -}}</span>
+            {%- else -%}
+              <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{- product.price | money -}}</span>
+            {%- endif -%}
+          </span>
+
+            <span class="price price--compare">
+            <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+            {%- if settings.currency_code_enabled -%}
+              {{- product.compare_at_price | money_with_currency -}}
+            {%- else -%}
+              {{- product.compare_at_price | money -}}
+            {%- endif -%}
+          </span>
+          {%- elsif product.price_varies -%}
+            {%- capture price_min -%}
+              {%- if settings.currency_code_enabled -%}
+                <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{ product.price_min | money_with_currency }}</span>
+              {%- else -%}
+                <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{ product.price_min | money }}</span>
+              {%- endif -%}
+            {%- endcapture -%}
+
+            {%- capture price_max -%}
+              {%- if settings.currency_code_enabled -%}
+                <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{- product.price_max | money_with_currency -}}</span>
+              {%- else -%}
+                <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{- product.price_max | money -}}</span>
+              {%- endif -%}
+            {%- endcapture -%}
+
+            <span class="price">
+            <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+            {{- 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max -}}
+          </span>
+          {%- else -%}
+            <span class="price">
+            <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+
+            {%- if settings.currency_code_enabled -%}
+              <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{- product.price | money_with_currency -}}</span>
+            {%- else -%}
+              <span data-ymq-item-key="{{ product.key }}" class='ymq_item_price'>{{- product.price | money -}}</span>
+            {%- endif -%}
+          </span>
+          {%- endif -%}
+
+          <div class="product-form__buy-buttons" {{ block.shopify_attributes }}>
+            {%- form 'product', product, is: 'product-form', id: product_form_id, class:"related_products_form" -%}
+              {%- if product.gift_card? and block.settings.show_gift_card_recipient -%}
+                <gift-card-recipient class="gift-card-recipient">
+                  <div class="input input--checkbox">
+                    <div class="checkbox-container">
+                      <input type="checkbox" class="checkbox" name="properties[__shopify_send_gift_card_to_recipient]" id="product-{{ section.id }}-{{ product.id }}-send-gift-card-to-recipient">
+                      <label for="product-{{ section.id }}-{{ product.id }}-send-gift-card-to-recipient" class="text--subdued">{{ 'gift_card.recipient.checkbox' | t }}</label>
+                    </div>
+                  </div>
+
+                  <div class="gift-card-recipient__fields js:hidden">
+                    <div class="input">
+                      <input id="product-{{ section.id }}-{{ product.id }}-recipient-email" type="email" class="input__field input__field--text" name="properties[Recipient email]" required value="{{ form.email }}">
+                      <label for="product-{{ section.id }}-{{ product.id }}-recipient-email" class="input__label">{{ 'gift_card.recipient.email_label' | t }}</label>
+                    </div>
+
+                    <div class="input">
+                      <input id="product-{{ section.id }}-{{ product.id }}-recipient-name" type="text" class="input__field input__field--text" name="properties[Recipient name]" value="{{ form.name }}">
+                      <label for="product-{{ section.id }}-{{ product.id }}-recipient-name" class="input__label">{{ 'gift_card.recipient.name_label' | t }}</label>
+                    </div>
+
+                    <div class="input">
+                      <textarea id="product-{{ section.id }}-{{ product.id }}-recipient-message" rows="4" class="input__field input__field--textarea" name="properties[Recipient message]">{{ form.message }}</textarea>
+                      <label for="product-{{ section.id }}-{{ product.id }}-recipient-message" class="input__label">{{ 'gift_card.recipient.message_label' | t }}</label>
+                    </div>
+                  </div>
+                </gift-card-recipient>
+              {%- endif -%}
+
+              <input type="hidden" disabled name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+              <product-payment-container form-id="{{ product_form_id }}" {% if update_url %}id="MainPaymentContainer"{% endif %} class="product-form__payment-container" {{ block.shopify_attributes }}>
+                <button id="AddRelatedProductToCart" type="submit" is="loader-button" {% unless block.settings.show_payment_button and template.suffix != 'quick-buy-popover' %}data-use-primary{% endunless %} data-product-add-to-cart-button data-button-content="{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t | escape }}{% else %}{{ 'product.form.add_to_cart' | t | escape }}{% endif %}" class="product-form__add-button button {% unless product.selected_or_first_available_variant.available %}button--ternary{% else %}{% if block.settings.show_payment_button and template.suffix != 'quick-buy-popover' %}button--secondary{% else %}button--primary{% endif %}{% endunless %} button--full" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+                  {%- if product.selected_or_first_available_variant.available -%}
+                    {%- if product.template_suffix == 'pre-order' -%}
+                      {{- 'product.form.pre_order' | t -}}
+                    {%- else -%}
+                      {{- 'product.form.add_to_cart' | t -}}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{- 'product.form.sold_out' | t -}}
+                  {%- endif -%}
+                </button>
+                {% if product.metafields.custom.popup_video != blank %}
+                  <button type="button" onclick="openPopup()" id="openpopup">Watch in action</button>
+                {% endif %}
+
+              </product-payment-container>
+
+              {%- if block.settings.show_payment_button and template.suffix != 'quick-buy-popover' -%}
+                <div class="payment_method">
+                  {{ form | payment_button }}
+
+                  {%- unless product.selected_or_first_available_variant.available -%}
+                    <style>
+                      #shopify-section-{{ section.id }} .shopify-payment-button {
+                        display: none;
+                      }
+                    </style>
+                  {%- endunless -%}
+                </div>
+              {%- endif -%}
+
+            {%- endform -%}
+          </div>
+
+
+        </product-item>
+      {% endfor %}
+    </div>
+
+  </product-list>
+</section>
+

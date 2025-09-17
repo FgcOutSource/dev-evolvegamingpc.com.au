@@ -1,0 +1,35 @@
+{% comment %} fgc Mr Dong add new {% endcomment %}
+{%- assign base = product.metafields.custom.shipping_image | strip -%}
+{%- if base != blank -%}
+  {%- assign webp = base | append: '.webp' -%}
+  {%- assign png  = base | append: '.png'  -%}
+  {%- assign jpg  = base | append: '.jpg'  -%}
+
+  <img
+    src="{{ webp | file_url }}"
+    alt="Shipping image"
+    loading="lazy"
+    class="shipping-badge"
+    onerror="
+      if (!this.dataset.step) {
+        this.dataset.step='1'; this.src='{{ png | file_url }}';
+      } else if (this.dataset.step==='1') {
+        this.dataset.step='2'; this.src='{{ jpg | file_url }}';
+      } else {
+        this.remove();
+      }
+    ">
+{%- endif -%}
+{% comment %} end fgc Mr Dong add new {% endcomment %}
+
+{% comment %} old code
+{% assign filename = product.metafields.custom.shipping_image | strip %}
+{% if filename != blank %}
+  <img style="heigt: 100%" src="{{ filename | file_url }}"
+       alt="Shipping image"
+       loading="lazy"
+       class="shipping-badge"
+       style="max-width:160px;height:auto">
+{% endif %}
+ 
+{% endcomment %}

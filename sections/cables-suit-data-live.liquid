@@ -1,0 +1,83 @@
+<style>
+.cables-type-data{
+	display: none;
+}
+</style>
+
+{% if section.blocks.size > 0 %}
+<section class="cables-suit-data">
+    <div class="plug-container" data-title="{{ section.settings.title }}">  
+	  {%- for block in section.blocks -%} 
+		<div class="suit" 
+			data-title="{{ block.settings.title }}"
+			data-line-img="{{ block.settings.line_img }}"
+		  data-cable-type="{{ block.settings.cable_type }}"
+		  data-suit-image="{{ block.settings.suit_image | img_url: '400x400' }}"
+			>
+		</div>
+	  {% endfor %}
+	</div>
+ </section>
+ {% endif %}
+
+{% schema %}
+
+{
+  "name": "Cables Suit Data",
+  "class": "shopify-section--cables-suit-data",
+  "disabled_on": {
+    "groups": ["custom.overlay"]
+  },
+  "max_blocks": 50,
+  "blocks": [
+      {
+        "type": "color",
+        "name": "Suit item",
+        "settings": [
+          	{
+		      "type": "header",
+		      "content": "Suit"
+		    },
+		    {
+			   "type": "text",
+			   "id": "title",
+			   "label": "Title"
+			},
+			{
+			   "type": "text",
+			   "id": "cable_type",
+			   "label": "Cable type"
+			},
+		    {
+			   "type": "textarea",
+			   "id": "line_img",
+			   "label": "Line image",
+			   "info": "Each line represents a line, and each line is filled with a picture name"
+			},
+			{
+		      "type": "image_picker",
+		      "id": "suit_image",
+		      "label": "Suit Image",
+		      "info": "400 x 400px .jpg recommen."
+		    }
+        ]
+      }
+  ],
+  "settings": [
+	{
+		"type": "header",
+		"content": "Plug"
+	},
+	{
+		"type": "text",
+		"id": "title",
+		"label": "Title"
+	}
+  ],
+  "presets": [
+    {
+      "name": "Cables Suit Data"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,241 @@
+{%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
+	{%- assign blends_with_background = false -%}
+  {%- else -%}
+	{%- assign blends_with_background = true -%}
+  {%- endif -%}
+  
+  {%- comment -%}
+  ------------------------------------------------------------------------------------------------------------------------
+	CSS
+  ------------------------------------------------------------------------------------------------------------------------
+  {%- endcomment -%}
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY="
+      crossorigin="anonymous"
+    />
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <main class="main">
+	
+		<div class="slider slider-nav">
+		  <div><h3>1</h3></div>
+		  <div><h3>2</h3></div>
+		  <div><h3>3</h3></div>
+		  <div><h3>4</h3></div>
+		  <div><h3>5</h3></div>
+		</div>
+
+		{%- if section.blocks.size > 1 and section.settings.show_arrows -%}
+			<prev-next-buttons class="gallery__prev-next-buttons prev-next-buttons">
+			  <button class="gallery__arrow prev-next-button prev-next-button--prev">
+				<span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
+				{%- include 'icon' with 'nav-arrow-left', direction_aware: true -%}
+			  </button>
+	
+			  <button class="gallery__arrow prev-next-button prev-next-button--next">
+				<span class="visually-hidden">{{ 'general.accessibility.next' | t }}</span>
+				{%- include 'icon' with 'nav-arrow-right', direction_aware: true -%}
+			  </button>
+			</prev-next-buttons>
+		{% endif %}
+		
+	</main>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
+
+<script>
+
+
+ $('.slider-nav').slick({
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   dots: false,
+   prevArrow: '<button class="gallery__arrow prev-next-button prev-next-button--prev">
+				<span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
+				{%- include 'icon' with 'nav-arrow-left', direction_aware: true -%}
+			  </button>',
+   nextArrow: '<button type="button" class="slick-next"></button>',
+  
+ });
+
+
+	
+
+</script>
+
+<style>
+
+	.slick-next:before, .slick-prev:before {
+  		display: none;
+	}
+
+	.slick-prev,
+	.slick-next {
+  		font-size: 18px;
+  		line-height: 1;
+  		color: #fff;
+  		background: red;
+  		border: 1px solid #333;
+  		border-radius: 50%;
+  		padding: 10px;
+	}
+
+	.slick-prev:hover,
+	.slick-next:hover {
+	  background: #555;
+	}
+
+	.main {
+	  font-family:Arial;
+	  width:500px;
+	  display:block;
+	  margin:0 auto;
+	}
+
+	h3 {
+	    background: #fff;
+	    color: #3498db;
+	    font-size: 36px;
+	    line-height: 100px;
+	    margin: 10px;
+	    padding: 2%;
+	    position: relative;
+	    text-align: center;
+	}
+	.action{
+	  display:block;
+	  margin:100px auto;
+	  width:100%;
+	  text-align:center;
+	}
+	.action a {
+	  display:inline-block;
+	  padding:5px 10px; 
+	  background:#f30;
+	  color:#fff;
+	  text-decoration:none;
+	}
+	.action a:hover{
+	  background:#000;
+	}
+
+</style>
+   
+  
+  {% schema %}
+  {
+	"name": "Gallery Custom Slider",
+	"class": "shopify-section--gallery",
+	"disabled_on": {
+	  "groups": ["header", "custom.overlay"]
+	},
+	"blocks": [
+	  {
+		"type": "image",
+		"name": "Image",
+		"settings": [
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image",
+			"info": "1500 x 1800 px .jpg recommended"
+		  },
+		  {
+			"type": "richtext",
+			"id": "caption",
+			"label": "Caption"
+		  }
+		]
+	  }
+	],
+	"settings": [
+	  {
+		"type": "text",
+		"id": "subheading",
+		"label": "Subheading",
+		"default": "Subheading"
+	  },
+	  {
+		"type": "text",
+		"id": "title",
+		"label": "Heading",
+		"default": "Gallery"
+	  },
+	  {
+		"type": "checkbox",
+		"id": "show_arrows",
+		"label": "Show navigation arrows",
+		"default": true
+	  },
+	  {
+		"type": "header",
+		"content": "Colors"
+	  },
+	  {
+		"type": "color",
+		"id": "background",
+		"label": "Background",
+		"default": "rgba(0,0,0,0)"
+	  },
+	  {
+		"type": "color",
+		"id": "text_color",
+		"label": "Color",
+		"default": "rgba(0,0,0,0)"
+	  },
+	  {
+		"type": "color",
+		"id": "arrow_bg_color",
+		"label": "Background",
+		"default": "#7800ff"
+	  },
+	  {
+		"type": "color",
+		"id": "arrow_icon_color",
+		"label": "Color",
+		"default": "#ffffff"
+	  }    
+	],
+	"presets": [
+	  {
+		"name": "Gallery Custom Slider",
+		"blocks": [
+		  {
+			"type": "image"
+		  },
+		  {
+			"type": "image"
+		  },
+		  {
+			"type": "image"
+		  }
+		],
+		"settings": {}
+	  }
+	]
+  }
+  {% endschema %}
+
+

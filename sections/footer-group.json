@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "image_with_text_RVQrVF": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_k9aaaa": {
+          "type": "item",
+          "settings": {
+            "tab_label": "Item",
+            "subheading": "Custom PC Sleeved cables",
+            "title": "Our PREMIUM PC Sleeved Cables have arrived!",
+            "content": "<p>You'll now be able to create any cable design you need. </p><p>All built here at our workshop in Sydney Australia shipped GLOBALLY EXPRESS to any destination.</p><p>No more waiting weeks!, custom orders made and tested here in Sydney shipped out in days via EXPRESS DHL Globally.</p><p>Everyone is different and with more variations than STARS in our UNIVERSE there's no doubt you can create a perfect custom pc sleeved extension cable that suits your creation.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_k9aaaa"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Free shipping",
+            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included</p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon_width": 50,
+            "title": "Customer service",
+            "content": "<p>We are available from Monday to Sunday to answer your questions.</p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon_width": 55,
+            "title": "Secure payment",
+            "content": "<p>Your payment information is processed securely.</p>"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 50,
+            "title": "Contact us",
+            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": "#282828",
+        "text_color": "#ffffff"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "Subscribe to our newsletter",
+        "content": "<p>Keep up to date with our | Giveaways | Promotions | Seasonal Deals</p>",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#830bff",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "71dc94b4-e083-42cd-b768-9ca2e6cc5a11": {
+          "type": "image",
+          "settings": {
+            "image_width": 180
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": ""
+          }
+        },
+        "4ef547be-f57a-4125-a74c-1a7babcb373c": {
+          "type": "links",
+          "settings": {
+            "menu": ""
+          }
+        },
+        "95330dbb-cdc6-4e64-9305-7b1477f57c67": {
+          "type": "links",
+          "settings": {
+            "menu": ""
+          }
+        }
+      },
+      "block_order": [
+        "71dc94b4-e083-42cd-b768-9ca2e6cc5a11",
+        "links",
+        "4ef547be-f57a-4125-a74c-1a7babcb373c",
+        "95330dbb-cdc6-4e64-9305-7b1477f57c67"
+      ],
+      "settings": {
+        "show_payment_icons": true,
+        "enable_follow_on_shop": true,
+        "show_country_selector": true,
+        "show_locale_selector": true
+      }
+    }
+  },
+  "order": [
+    "image_with_text_RVQrVF",
+    "text-with-icons",
+    "newsletter",
+    "footer"
+  ]
+}

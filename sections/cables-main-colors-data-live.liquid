@@ -1,0 +1,79 @@
+<style>
+.cables-main-colors-data{
+	display: none;
+}
+</style>
+
+{% if section.blocks.size > 0 %}
+<section class="cables-main-colors-data">
+    <div class="color-main-container" data-title="{{ section.settings.title }}">  
+		{%- for block in section.blocks -%} 
+	
+		<div class="main-color"
+			data-title="{{ block.settings.title }}"
+			data-start-color="{{ block.settings.range_start_color}}"
+			data-end-color="{{ block.settings.range_end_color}}"
+			>
+		</div>
+	
+		{% endfor %}
+	</div>
+ </section>
+ {% endif %}
+
+{% schema %}
+
+{
+  "name": "Cables Main Colors Data",
+  "class": "shopify-section--cables-main-colors-data",
+  "disabled_on": {
+    "groups": ["custom.overlay"]
+  },
+  "max_blocks": 50,
+  "blocks": [
+      {
+        "type": "color",
+        "name": "Color item",
+        "settings": [
+          	{
+		      "type": "header",
+		      "content": "Main Color"
+		    },
+		    {
+			   "type": "text",
+			   "id": "title",
+			   "label": "Title"
+			},
+			{
+		      "type": "color",
+		      "id": "range_start_color",
+		      "label": "Range start Color",
+		      "info": "Please select an actual color"
+		    },
+			{
+		      "type": "color",
+		      "id": "range_end_color",
+		      "label": "Range end Color",
+		      "info": "Please select an actual color"
+		    }
+        ]
+      }
+  ],
+  "settings": [
+  	{
+      "type": "header",
+      "content": "Main Color"
+    },
+    {
+	   "type": "text",
+	   "id": "title",
+	   "label": "Title"
+	}
+  ],
+  "presets": [
+    {
+      "name": "Cables Main Colors Data"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,440 @@
+{%- if section.settings.background != settings.background and section.settings.background != 'rgba(0,0,0,0)' -%}
+  {%- assign blends_with_background = false -%}
+{%- else -%}
+  {%- assign blends_with_background = true -%}
+{%- endif -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
+      {%- assign section_background = settings.background -%}
+    {%- else -%}
+      {%- assign section_background = section.settings.background -%}
+    {%- endif -%}
+
+    {%- if section.settings.text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign heading_color = settings.heading_color -%}
+      {%- assign text_color = settings.text_color -%}
+    {%- else -%}
+      {%- assign heading_color = section.settings.text_color -%}
+      {%- assign text_color = section.settings.text_color -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_background == 'rgba(0,0,0,0)' -%}
+      {%- assign button_background = settings.primary_button_background -%}
+    {%- else -%}
+      {%- assign button_background = section.settings.button_background -%}
+    {%- endif -%}
+
+    {%- if section.settings.button_text_color == 'rgba(0,0,0,0)' -%}
+      {%- assign button_text_color = settings.primary_button_text_color -%}
+    {%- else -%}
+      {%- assign button_text_color = section.settings.button_text_color -%}
+    {%- endif -%}
+
+    --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
+    --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
+    --primary-button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
+    --primary-button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
+
+    --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
+  }
+</style>
+
+<section class="section {% if template.name == 'page' and template.suffix contains 'contact' %}section--tight{% endif %} {% unless blends_with_background %}section--flush{% endunless %}">
+  <div class="section__color-wrapper">
+    <div class="container">
+      <div class="contact {% unless blends_with_background %}vertical-breather{% endunless %}">
+        {%- capture aside_content -%}
+          {%- if section.settings.image != blank -%}
+            {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) calc(100vw - 24px * 2), 530px', widths: '200,300,400,500,600,800,1000,1200,1400', class: 'contact__image' -}}
+          {%- endif -%}
+
+          {%- capture aside_text_1 -%}
+            {%- if section.settings.text_1_heading != blank or section.settings.text_1_text != blank -%}
+              {%- if section.settings.text_1_heading != blank -%}
+                <p class="heading heading--small">{{ section.settings.text_1_heading | escape }}</p>
+              {%- endif -%}
+
+              {%- if section.settings.text_1_text != blank -%}
+                <div class="rte">
+                  {{- section.settings.text_1_text -}}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- capture aside_text_2 -%}
+            {%- if section.settings.text_2_heading != blank or section.settings.text_2_text != blank -%}
+              {%- if section.settings.text_2_heading != blank -%}
+                <p class="heading heading--small">{{ section.settings.text_2_heading | escape }}</p>
+              {%- endif -%}
+
+              {%- if section.settings.text_2_text != blank -%}
+                <div class="rte">
+                  {{- section.settings.text_2_text -}}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- capture aside_text_3 -%}     
+            <div class="store-info">
+            <ul class="contact_info">             
+              {%- if section.settings.contact_details_phone != blank -%}
+                  <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/Evolve-Gaming-PC-icon-phone.png" style="width: 20px;"><a href="tel:{{- section.settings.contact_details_phone -}}"><span>PHONE</span></a></li>
+              {%- endif -%}
+              <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/instagram.png?v=1698629607" style="width: 20px;"><a href="https://www.instagram.com/evolve_gamingpc/" target="_blank"><span>INSTAGRAM</span></a> </span></li>
+              <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/facebook.png?v=1698629607" style="width: 20px;"><a href="https://www.facebook.com/EvolveGamingPC" target="_blank"><span>FACEBOOK</span></a></li>
+              <li>
+				{% comment %} <img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/facebook.png?v=1698629607" style="width: 20px;"> {% endcomment %}
+				<i class="fab fa-youtube" style="font-size: 19px; color: #7808ff;"></i> 
+			   <a href="https://www.youtube.com/@EGPC" target="_blank" rel="noopener noreferrer">
+  						YOUTUBE
+				</a>
+			  {% comment %} <a href="https://www.youtube.com/@EGPC" target="_blank"><span>YOUTUBE</span></a></li> {% endcomment %}
+              
+              <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/Ticktok-purple.png?v=1700703831" style="width: 20px;"><a href="https://www.tiktok.com/@evolvegamingpc " target="_blank"><span>Tiktok</span></a></li>
+
+              {%- if section.settings.contact_details_email != blank -%}
+                  <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/email.png?v=1698629845" style="width: 20px;"><a href="mailto:{{- section.settings.contact_details_email -}}"><span>EMAIL</span></a> </li>
+              {%- endif -%}
+            
+              {%- if section.settings.contact_details_hours_a != blank -%}
+                  <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/Evolve-Gaming-PC-icon-clock.png" style="width: 20px;"><span>{{- section.settings.contact_details_hours_a -}} </span></li>
+              {%- endif -%}
+              {%- if section.settings.contact_details_hours_b != blank -%}
+                  <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/Evolve-Gaming-PC-icon-clock.png" style="width: 20px;"><span>{{- section.settings.contact_details_hours_b -}} </span></li>
+              {%- endif -%}   
+
+              {%- if section.settings.contact_details_location != blank -%}
+                  <li><img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/Evolve-Gaming-PC-icon-map.png?v=1694664303" style="width: 20px;"><a href="https://maps.app.goo.gl/DZQRm4GmKTEjPqvw8" target="_blank"><span>{{- section.settings.contact_details_location -}}  </span></a></li>
+              {%- endif -%}   
+            </ul>                       
+            </div>
+        
+            <div class="store-location">               
+                <a href="https://maps.app.goo.gl/xQEk2pSuXCruzDgv6" target="_blank" class="form__submit button button--primary button--full">VISIT US</a>
+            </div>
+            <style>
+              .contact__main, .contact__aside {max-width:48%; width:48%;}
+              .contact {display: flex; flex-direction: row; padding-top: 20px; padding-bottom: 20px;}
+              .contact_info li span {width: 40%;}
+              .contact__main p {text-transform: uppercase;}
+              .contact__text-list {border: none; padding: 0;}
+              .contact__text-list p {text-transform: uppercase; padding-bottom: 20px;}
+              .contact__aside {width: 100%; background: #000; padding: 50px; margin: 0px 10px;}
+              .input__field {border-radius: 0; background: #171717; border-color: #171717;}
+              .button {width: auto; border-radius: 0;}
+              .contact__main {background: #000; padding: 50px; margin: 0px 10px;}
+    
+              @media only screen and (max-width: 980px) {   
+                 .contact__main, .contact__aside {max-width:95%!important; width:95%!important;}
+                 .contact {display:block!important;} 
+                 .contact__main {padding:20px!important;}
+                 .contact__aside {margin-top:20px!important; padding:20px!important; width:auto!important;}
+                 ul.contact_info li {display:block!important; text-align:center!important;}
+                 ul.contact_info li span {display:inline-block!important; width:100%!important;} 
+                 ul.contact_info li img {display:inline-block!important;}  
+                 .contact__text-item .rte p {text-align:center;}
+                 .store-location {text-align:center;}
+                 .button--full {width:100%!important;}
+              }
+            </style>
+          {%- endcapture -%}
+
+          {%- if aside_text_1 != blank or aside_text_2 != blank -%}
+            <div class="contact__text-list">
+              {%- if aside_text_1 != blank -%}
+                <div class="contact__text-item text-container">
+                  {{- aside_text_1 -}}
+                </div>
+              {%- endif -%}
+
+              {%- if aside_text_2 != blank -%}
+                <div class="contact__text-item text-container">
+                  {{- aside_text_2 -}}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if aside_text_3 != blank -%}
+              {%- if aside_text_3 != blank -%}
+                <div class="contact__text-item text-container">
+                  {{- aside_text_3 -}}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+        {%- endcapture -%}
+
+        <div class="contact__main">
+          {%- if section.settings.title != blank or section.settings.content != blank -%}
+            <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %} text-container">
+              {%- if section.settings.title != blank -%}
+                <h1 class="heading h2">{{ section.settings.title }}</h1>
+              {%- endif -%}
+
+              {%- if section.settings.content != blank -%}
+                {{- section.settings.content -}}
+              {%- endif -%}
+            </header>
+          {%- endif -%}
+
+          {%- form 'contact', class: 'contact__form form' -%}
+            {%- if form.posted_successfully? -%}
+              <div class="banner banner--success form__banner">
+                <span class="banner__ribbon">{% render 'icon' with 'form-success' %}</span>
+                <p class="banner__content">{{ 'contact.form.successfully_sent' | t }}</p>
+              </div>
+            {%- endif -%}
+
+            {%- if form.errors -%}
+              <div class="form__banner banner banner--error">
+                <span class="banner__ribbon">{% render 'icon' with 'form-error' %}</span>
+
+                <div class="banner__content">
+                  {{- form.errors | default_errors -}}
+                </div>
+              </div>
+            {%- endif -%}
+
+            <div class="input">
+              <input id="contact-form-name" type="text" class="input__field {% if customer.name != blank %}is-filled{% endif %}" name="contact[name]" aria-label="{{ 'contact.form.name' | t }}" required {% if customer %}value="{{ customer.name }}"{% endif %}>
+              <label for="contact-form-name" class="input__label">{{ 'contact.form.name' | t }}</label>
+            </div>
+
+            <div class="input">
+              <input id="contact-form-email" type="email" class="input__field {% if customer.email != blank %}is-filled{% endif %}" name="contact[email]" aria-label="{{ 'contact.form.email' | t }}" required {% if customer %}value="{{ customer.email }}"{% endif %}>
+              <label for="contact-form-email" class="input__label">{{ 'contact.form.email' | t }}</label>
+            </div>
+
+            {%- for block in section.blocks -%}
+              {%- assign field_title = block.settings.title -%}
+
+              {%- if field_title == blank -%}
+                {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
+              {%- endif -%}
+
+              {%- if block.type == 'text' -%}
+                <div class="input">
+                  {%- if block.settings.use_long_text -%}
+                    <textarea id="contact-form-{{ field_title | handle }}" name="contact[{{ field_title | escape }}]" rows="4" class="input__field input__field--textarea" aria-label="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}></textarea>
+                    <label for="contact-form-{{ field_title | handle }}" class="input__label">{{ block.settings.title | escape }}</label>
+                  {%- else -%}
+                    <input id="contact-form-{{ field_title | handle }}" type="text" class="input__field" name="contact[{{ field_title | escape }}]" aria-label="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}>
+                    <label for="contact-form-{{ field_title | handle }}" class="input__label">{{ block.settings.title | escape }}</label>
+                  {%- endif -%}
+                </div>
+              {%- elsif block.type == 'dropdown' -%}
+                {%- assign values = block.settings.values | split: ',' -%}
+
+                {%- if values == empty -%}
+                  {%- continue -%}
+                {%- endif -%}
+
+                <div class="input">
+                  <div class="select-wrapper">
+                    <select id="contact-form-{{ field_title | handle }}" class="select" name="contact[{{ field_title | escape }}]" title="{{ block.settings.title | escape }}" required>
+                      <option value="" disabled selected></option>
+
+                      {%- for value in values -%}
+                        {%- assign trim_value = value | strip -%}
+
+                        <option value="{{ trim_value | escape }}">{{ trim_value | escape }}</option>
+                      {%- endfor -%}
+                    </select>
+
+                    {%- render 'icon' with 'chevron' -%}
+                  </div>
+
+                  <label for="contact-form-{{ field_title | handle }}" class="input__label">{{ block.settings.title | escape }}</label>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+
+            <div class="input">
+              <textarea id="contact-form-message" name="contact[body]" rows="4" class="input__field input__field--textarea" aria-label="{{ 'contact.form.message' | t }}" required></textarea>
+              <label for="contact-form-message" class="input__label">{{ 'contact.form.message' | t }}</label>
+            </div>
+
+            <button is="loader-button" type="submit" class="form__submit button button--primary button--full">Send It!</button>
+          {%- endform -%}
+        </div>
+
+        {%- if aside_content != blank -%}
+          <aside class="contact__aside">
+            {{- aside_content -}}
+          </aside>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact",
+  "class": "shopify-section--contact-form",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1000 x 1000px .jpg recommended"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Contact Us"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "header",
+      "content": "Block 1"
+    },
+    {
+      "type": "text",
+      "id": "text_1_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text_1_text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Block 2"
+    },
+    {
+      "type": "text",
+      "id": "text_2_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text_2_text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Contact Details"
+    }, 
+    {
+      "type": "text",
+      "id": "contact_details_email",
+      "label": "Email"
+    },  
+    {
+      "type": "text",
+      "id": "contact_details_location",
+      "label": "Location"
+    },      
+    {
+      "type": "text",
+      "id": "contact_details_phone",
+      "label": "Phone"
+    },   
+    {
+      "type": "text",
+      "id": "contact_details_hours_a",
+      "label": "Trading Hours"
+    },
+    {
+      "type": "text",
+      "id": "contact_details_hours_b",
+      "label": "Trading Hours"
+    },                  
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "rgba(0,0,0,0)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text field",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_long_text",
+          "label": "Use long text",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "is_required",
+          "label": "Field is required",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "name": "Dropdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "text",
+          "id": "values",
+          "label": "Values",
+          "info": "Separate each value by a comma.",
+          "default": "value 1, value 2, value 3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact form",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

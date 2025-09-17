@@ -1,0 +1,498 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "page_width": "medium"
+      }
+    },
+    "32508150-afe3-427b-987a-bfa41f78ef76": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/Combo-1.png",
+        "subheading": "Highly tailored Custom and Prebuilt pcs",
+        "title": "Custom PC",
+        "content": "<p><strong>Have an idea about your custom gaming PC? There's no limitation here at Evolve Gaming PC. No matter if you want to make a change to a prebuilt pc or a gaming pc we can faciliate!</strong></p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "middle_left",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "fcbca6c4-41d6-44a2-a7d0-6603d059de6b": {
+      "type": "contact-form",
+      "blocks": {
+        "ff99ad65-9968-432e-bc3f-698b766b3609": {
+          "type": "text",
+          "settings": {
+            "title": "Phone Number",
+            "use_long_text": false,
+            "is_required": true
+          }
+        },
+        "fb855683-718c-4a4b-b0ca-8e918e8ef8d0": {
+          "type": "text",
+          "settings": {
+            "title": "Budget",
+            "use_long_text": false,
+            "is_required": false
+          }
+        },
+        "59f9a889-aec5-4a4a-bc79-92ceb408fdfc": {
+          "type": "text",
+          "settings": {
+            "title": "Where did you find about us?",
+            "use_long_text": false,
+            "is_required": false
+          }
+        },
+        "e909d3f7-22aa-4467-85dc-31b98f2d76c2": {
+          "type": "text",
+          "settings": {
+            "title": "What country are you from?",
+            "use_long_text": false,
+            "is_required": false
+          }
+        }
+      },
+      "block_order": [
+        "ff99ad65-9968-432e-bc3f-698b766b3609",
+        "fb855683-718c-4a4b-b0ca-8e918e8ef8d0",
+        "59f9a889-aec5-4a4a-bc79-92ceb408fdfc",
+        "e909d3f7-22aa-4467-85dc-31b98f2d76c2"
+      ],
+      "custom_css": [
+        ".contact__aside {display: none;}",
+        ".contact__main {width: 100%; max-width: 100%;}",
+        ".contact__main h1 {text-align: center;}",
+        ".form__submit {width: 100% !important;}",
+        "section {margin-top: 0; margin-bottom: 0;}"
+      ],
+      "settings": {
+        "title": "Your PC Journey Starts now",
+        "content": "",
+        "text_1_heading": "",
+        "text_1_text": "",
+        "text_2_heading": "",
+        "text_2_text": "",
+        "contact_details_email": "",
+        "contact_details_location": "",
+        "contact_details_phone": "",
+        "contact_details_hours_a": "",
+        "contact_details_hours_b": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "a53fe8c4-504b-4733-9841-bd42ad80be08": {
+      "type": "multi-column",
+      "blocks": {
+        "template--20898876129554__a53fe8c4-504b-4733-9841-bd42ad80be08-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/chat.png",
+            "image_width": 10,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "1 - Call our friendly staff",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20898876129554__a53fe8c4-504b-4733-9841-bd42ad80be08-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/shop.png",
+            "image_width": 10,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "2 - Your budget, Your Way",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20898876129554__a53fe8c4-504b-4733-9841-bd42ad80be08-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/delivery.png",
+            "image_width": 10,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "3 - Express shipped, plug and game",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--20898876129554__a53fe8c4-504b-4733-9841-bd42ad80be08-item-1",
+        "template--20898876129554__a53fe8c4-504b-4733-9841-bd42ad80be08-item-2",
+        "template--20898876129554__a53fe8c4-504b-4733-9841-bd42ad80be08-item-3"
+      ],
+      "custom_css": [
+        ".h5 {font-size: 16px;}",
+        "@media only screen and (max-width: 980px) {.multi-column__inner {display: block; } .multi-column__item {padding-bottom: 20px; } .multi-column__inner {display: block; } .multi-column__item {padding-bottom: 20px; } .multi-column__inner--scroller {min-width: auto !important; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#0f0f0f",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "2140e212-f079-40b4-a5c2-837a381a327e": {
+      "type": "custom-html",
+      "custom_css": [
+        ".es-widget-title-container {display: none;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<script src=\"https://static.elfsight.com/platform/platform.js\" data-use-service-core=\"\" defer></script>\n<div class=\"elfsight-app-8e1197a0-50e2-42e4-a988-75b018988490\" data-elfsight-app-lazy=\"\"></div>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "#0f0f0f",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "de100ee8-b4c0-4e49-90ea-b423d3a36eb9": {
+      "type": "timeline",
+      "blocks": {
+        "template--20898876129554__de100ee8-b4c0-4e49-90ea-b423d3a36eb9-item-1": {
+          "type": "item",
+          "settings": {
+            "label": "",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "798c90dd-f6e6-4bed-9262-ced4479dd65e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/front_purple.png",
+            "label": "Lorem Ipsum",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "08a43490-8db8-47a6-9f70-3f636bf50f0c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/20230428_174347.jpg",
+            "label": "Lorem Ipsum",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20898876129554__de100ee8-b4c0-4e49-90ea-b423d3a36eb9-item-1",
+        "798c90dd-f6e6-4bed-9262-ced4479dd65e",
+        "08a43490-8db8-47a6-9f70-3f636bf50f0c"
+      ],
+      "disabled": true,
+      "settings": {
+        "subheading": "Custom PC",
+        "title": "The Way You Want",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "80ad2afc-1a7a-4787-bca0-e291f9bdf225": {
+      "type": "gallery",
+      "blocks": {
+        "template--20898876129554__80ad2afc-1a7a-4787-bca0-e291f9bdf225-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-7-1.jpg",
+            "caption": ""
+          }
+        },
+        "template--20898876129554__80ad2afc-1a7a-4787-bca0-e291f9bdf225-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-5-1.jpg",
+            "caption": ""
+          }
+        },
+        "template--20898876129554__80ad2afc-1a7a-4787-bca0-e291f9bdf225-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-6-1.jpg",
+            "caption": ""
+          }
+        },
+        "a7208bb6-de32-4ffa-bbed-d502345bb9b7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-product-apollo-1.png",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20898876129554__80ad2afc-1a7a-4787-bca0-e291f9bdf225-image-1",
+        "template--20898876129554__80ad2afc-1a7a-4787-bca0-e291f9bdf225-image-2",
+        "template--20898876129554__80ad2afc-1a7a-4787-bca0-e291f9bdf225-image-3",
+        "a7208bb6-de32-4ffa-bbed-d502345bb9b7"
+      ],
+      "custom_css": [
+        ".gallery__item {flex: 0 0 33.333333%;}",
+        ".gallery__item img {height: auto !important; width: 100% !important;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "The Way You Want",
+        "show_arrows": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "arrow_bg_color": "#7800ff",
+        "arrow_icon_color": "#ffffff"
+      }
+    },
+    "9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1": {
+      "type": "multi-column",
+      "blocks": {
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-1": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "PERFORMANCE",
+            "content": "<p>A custom PC from EGPC offers unparalleled performance, tailored to your specific needs for the ultimate gaming or content creation experience.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-2": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "ONLY THE BEST",
+            "content": "<p>Trust in the hands of skilled technicians, who use the latest technology to craft each Gaming PC and our range of custom machines with precision and passion.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-3": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "STABILITY & STRESS TESTED",
+            "content": "<p>Each custom PC is rigorously tested for stability and reliability,<br/>ensuring that your machine can handle even the most demanding<br/>applications.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-4": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "INDUSTRY READY",
+            "content": "<p>Stay ahead of the competition with a custom PC designed for the demands of the industry, perfect for gaming, content creation, or demanding<br/>workloads.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "31acccee-d529-44fa-91f7-6e7b7d3130cc": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "3 YEAR WARRANTY",
+            "content": "<p>Invest with confidence in your custom PC, backed by a comprehensive 3-year warranty for peace of mind.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-1",
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-2",
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-3",
+        "template--20898876129554__9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1-item-4",
+        "31acccee-d529-44fa-91f7-6e7b7d3130cc"
+      ],
+      "custom_css": [
+        ".multi-column--medium {--section-items-per-row: 5;}",
+        "@media only screen and (max-width: 980px) {.multi-column__inner {display: block; } .multi-column__item {padding-bottom: 20px; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "subheading": "3 YEAR WARRANTY and more - EXPERTLY CRAFTED",
+        "title": "EXPERIENCE CUSTOM PC Power",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_jtegx3": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_HfMmyL": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_HfMmyL"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "products_count": 22,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "7cf5b557-9e12-47ad-8c65-007315daa5c5": {
+      "type": "logo-list",
+      "blocks": {
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Evolve-Gaming-PC-socmed-fb.png",
+            "link": "https://www.facebook.com/EvolveGamingPC/"
+          }
+        },
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-2": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Evolve-Gaming-PC-socmed-ig.png",
+            "link": "https://www.instagram.com/evolve_gamingpc/"
+          }
+        },
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-3": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Evolve-Gaming-PC-socmed-tiktok.png",
+            "link": "https://www.tiktok.com/@evolvegamingpc"
+          }
+        },
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-4": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Evolve-Gaming-PC-socmed-yt.png",
+            "link": "https://www.youtube.com/@EGPC"
+          }
+        }
+      },
+      "block_order": [
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-1",
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-2",
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-3",
+        "template--20898876129554__7cf5b557-9e12-47ad-8c65-007315daa5c5-logo-4"
+      ],
+      "custom_css": [
+        "h3 {font-size: 50px;}",
+        "@media only screen and (max-width: 980px) {h3 {font-size: 30px !important; } .logo-list__list img {width: 30% !important; }}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "Ready to start the process?",
+        "title": "Contact us on any of our socials",
+        "button_text": "",
+        "button_link": "",
+        "stack_logos": true,
+        "background": "#0f0f0f",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "logo_background": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "32508150-afe3-427b-987a-bfa41f78ef76",
+    "fcbca6c4-41d6-44a2-a7d0-6603d059de6b",
+    "a53fe8c4-504b-4733-9841-bd42ad80be08",
+    "2140e212-f079-40b4-a5c2-837a381a327e",
+    "de100ee8-b4c0-4e49-90ea-b423d3a36eb9",
+    "80ad2afc-1a7a-4787-bca0-e291f9bdf225",
+    "9f9e1b6f-fd8c-422c-aa6c-86ef7e585df1",
+    "featured_collections_jtegx3",
+    "7cf5b557-9e12-47ad-8c65-007315daa5c5"
+  ]
+}

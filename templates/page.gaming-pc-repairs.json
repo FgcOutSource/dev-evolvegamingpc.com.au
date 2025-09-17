@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "rich_text_XB6rYK": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<h2>UNIQUE LOOK AND PERFORMANCE</h2><p>At Evolve Gaming PC we offer full and unique gaming computer builds using Intel or AMD components. All of our builds are tailor made for each user. After a gaming computer, or powerful all-rounder exactly to your specs we can make that happen.</p><ul><li>Unique Extension Cables</li><li>Custom Watercooling?</li><li>RGB Overload?</li><li>Overclocking?</li></ul><p>There is no job too large or small with incredibly fast turn around times we only require a 50% deposit to get started for builds under $3000. All computer parts sourced through EGPC come with 3 years warranty.</p><h2>NOTHING FITS WHAT I NEED</h2><p>If you aren’t sure what you need or if you can’t find it on our site, you can request a call back at a time that best suits you. We discuss on what you’re trying to achieve as well as the PC budget you have in mind for your custom computer build. Remember we work with you to obtain the best possible results! Contact us for more information.</p><h2>FREE ONGOING SUPPORT</h2><p><strong>That’s Right</strong></p><p>No matter the issue with your PC purchased here at Evolve. We always go that extra mile to ensure a speedy and satisfying resolution for any and all issues that may arise. Depending on location we can even come to you! Most of the work is done at our shop right here in Campbelltown for all of your PC and Gaming requirements.</p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_style_2_hgEQHi": {
+      "type": "image-with-text-style-2",
+      "blocks": {
+        "item_ttejrx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Evolve-Gaming-PC-img-15.png",
+            "tab_label": "Item",
+            "subheading": "",
+            "title": "COMPUTER INSTALLATIONS",
+            "content": "<p>If you aren’t sure where to start we can set up your new PC, install printers and monitors, even install your software so your new computer is ready to go. Ask what else we can do? The sky is the limit when it comes to your computer needs.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_ttejrx"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_style_2_FLtwpQ": {
+      "type": "image-with-text-style-2",
+      "blocks": {
+        "item_LCyyP3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/370676898_839692884611043_8024730890107856229_n.jpg",
+            "tab_label": "Item",
+            "subheading": "",
+            "title": "COMPUTER REPAIRS AND SUPPORT",
+            "content": "<p>Something not quite right? We may need to diagnose the issue, if it’s simple and can be done remotely, there is generally no charge for the support. If we need to order or repair broken, outdated or obsolete parts – you’ll get a no-nonsense quote from us.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_LCyyP3"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text_with_icons_pCKcyp": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_RBMXXz": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-store",
+            "custom_icon_width": 50,
+            "title": "5+ YEARS",
+            "content": ""
+          }
+        },
+        "item_cbtbYp": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-like",
+            "custom_icon_width": 50,
+            "title": "250+ 5 STAR REVIEWS ON GOOGLE",
+            "content": ""
+          }
+        },
+        "item_XazAzX": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-love",
+            "custom_icon_width": 50,
+            "title": "20000+ SOCIAL MEDIA FOLLOWING",
+            "content": ""
+          }
+        },
+        "item_JgEqW6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-warranty",
+            "custom_icon_width": 50,
+            "title": "100% AUSTRALIAN FAMILY BUSINESS",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_RBMXXz",
+        "item_cbtbYp",
+        "item_XazAzX",
+        "item_JgEqW6"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_XB6rYK",
+    "image_with_text_style_2_hgEQHi",
+    "image_with_text_style_2_FLtwpQ",
+    "text_with_icons_pCKcyp"
+  ]
+}

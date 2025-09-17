@@ -1,0 +1,1248 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "4d5dc08d-d1bd-43f3-8640-a9b6c3a7f64e": {
+      "type": "slideshow-style-2",
+      "blocks": {
+        "image_YEWxnM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RTX_4070_White_System_Gaming_PC_Evolve_Gaming_PC.webp",
+            "text_position": "top_left",
+            "subheading": "",
+            "title": "",
+            "title_2": "",
+            "slidercontent": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#7808ff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_PWzj8B": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "title_2": "",
+            "slidercontent": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#7808ff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_dJmRKe": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "title_2": "",
+            "slidercontent": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#7808ff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_PBWnT8": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "title_2": "",
+            "slidercontent": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#7808ff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "template--20503774232850__4d5dc08d-d1bd-43f3-8640-a9b6c3a7f64e-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "title_2": "",
+            "slidercontent": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#7808ff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_YEWxnM",
+        "image_PWzj8B",
+        "image_dJmRKe",
+        "image_PBWnT8",
+        "template--20503774232850__4d5dc08d-d1bd-43f3-8640-a9b6c3a7f64e-image-1"
+      ],
+      "custom_css": [
+        "h3 .heading .title_2 span {display: inherit !important;}",
+        "a {background-color: red;}"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 13,
+        "background": "#101010"
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "99b66012-d95a-44a0-9832-f2d61189f75f": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle_center",
+            "subheading": "Step Into",
+            "title": "Evolve Gaming PC",
+            "slidercontent": "Australia's bespoke PC builders",
+            "button_1_text": "",
+            "button_1_link": "shopify://collections/all",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#282828",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70
+          }
+        },
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "slidercontent": "Write content about your store",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "slide-2": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "slidercontent": "Write content about your store",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "99b66012-d95a-44a0-9832-f2d61189f75f",
+        "slide-1",
+        "slide-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": false,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "gaming-pcs",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_6z9aKW": {
+          "type": "collection",
+          "settings": {
+            "collection": "water-cooled-pcs",
+            "label": "Watercooled Range",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection_6z9aKW"
+      ],
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "Choose your gaming pc",
+        "title_2": "Collection",
+        "content": "",
+        "products_count": 20,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "#262626",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured_collections_8LmjmH": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_jaQDj3": {
+          "type": "collection",
+          "settings": {
+            "collection": "gaming-pcs",
+            "label": "evolve gaming pc",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_HxVrxN": {
+          "type": "collection",
+          "settings": {
+            "collection": "water-cooled-pcs",
+            "label": "Watercooled Range",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_jaQDj3",
+        "collection_HxVrxN"
+      ],
+      "custom_css": [
+        ".section__color-wrapper {background-color: #000;}",
+        ".tabs-nav__item-list button {font-weight: unset;}",
+        ".text-container h2 {margin-bottom: 0;}",
+        ".text-container h3 {margin-top: 5px;}"
+      ],
+      "settings": {
+        "subheading": "OUR BEST SELLERS",
+        "title": "Choose your",
+        "title_2": "gaming pc",
+        "content": "",
+        "products_count": 20,
+        "products_per_row": 4,
+        "stack_products": false,
+        "show_cta": false,
+        "background": "#010101",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_style_2_ftVDJQ": {
+      "type": "image-with-text-style-2",
+      "blocks": {
+        "item_fDneYH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/GCGD_Evolve_Website_Slices-07.webp",
+            "tab_label": "Item 2",
+            "subheading": "NO MATTER WHERE YOU ARE IN YOUR PC JOURNEY",
+            "title": "CHOOSE YOUR",
+            "title_2": "GAMING PC",
+            "title_3": "",
+            "content": "<p>We can help you create your ideal, one-of-a-kind PC. We offer access to components you can’t find anywhere else and a team of master builders that believe technology is art.</p><p>We believe exceptional performance and peerless design should be accessible to everyone at whatever your budget. Prebuilt gaming PCs, custom gaming PCs, business related or otherwise.</p><p>Watercooled PCs offer a range of benefits from a quieter system to a much cooler system temperate and aesthetics.</p>",
+            "button_text": "SEE MORE",
+            "button_text_2": "CALL US",
+            "button_link_2": "https://evolvegamingpc.com.au/pages/contact",
+            "button_link": "https://evolvegamingpc.com.au/collections/gaming-pcs"
+          }
+        }
+      },
+      "block_order": [
+        "item_fDneYH"
+      ],
+      "custom_css": [
+        "[reveal] {opacity: 1;}",
+        ".image-with-text__wrapper {background: #101010;}",
+        ".button-wrapper.fgc-custom__button-wrapper a:first-child:after {color: #7808fe;}",
+        ".button-wrapper.fgc-custom__button-wrapper a:first-child {background: #fff; color: #7808ff;}",
+        "@media screen and (min-width: 1000px) {.image-with-text.image-with-text-style2 .image-with-text__image-wrapper {width: 40%; margin: auto !important; }}",
+        ".image-with-text__wrapper {background-color: transparent !important;}",
+        ".image-with-text__image-wrapper {position: relative;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "712ac5a4-1cd2-4539-9280-4dab8477947f": {
+      "type": "custom-html",
+      "custom_css": [
+        ".es-widget-title-container {display: none;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<script src=\"https://static.elfsight.com/platform/platform.js\" data-use-service-core=\"\" defer></script>\n<div class=\"elfsight-app-8e1197a0-50e2-42e4-a988-75b018988490\" data-elfsight-app-lazy=\"\"></div>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_desktop_YK8myM": {
+      "type": "multi-column-desktop",
+      "blocks": {
+        "item_ETPfpQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/P1016255.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Water Cooled PCS",
+            "content": "<p>Distinguishing ourselves from the competition, we provide impeccably crafted, premium Water Cooled PCs. Our Water Cooled PCs deliver a noiseless, temperature-reducing solution with aesthetics to complement the experience. Sydney now boasts a destination for Water Cooled PCs, exclusively at Evolve Gaming PC.</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/water-cooled-pcs",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_be9mJ6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/NZXTWHITE.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Prebuilt Gaming PCS",
+            "content": "<p>Looking for a prebuilt gaming PC? We offer a spectrum of options, from budget-friendly to high-performance solutions for those who prefer a hassle-free experience. But if you believe that a prebuilt gaming PC might not be a perfect fit, rest assured, we can still customize our offerings to cater to your unique needs</p>",
+            "link_text": "SHOP NOW",
+            "link_url": "shopify://collections/frontpage",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_hzbXch": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1124_EGPC-21_2.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Custom PC Sleeved Cables",
+            "content": "<p>The customized PC experience allows you to choose from a vast array of components, including our newly custom pc sleeved cables. Manufactured here in Australia. With unlimited options for your PC sleeved coloured cables. Design your own PC extension sleeved cables to your preference. Get SLEEVED with our theme builder.</p>",
+            "link_text": "SHOP NOW",
+            "link_url": "shopify://products/cables-live",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_gm3A3W": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/0124_EGPC-14.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Services",
+            "content": "<p>From tailored pc building services, you bring the parts and we build your dream pc. GPU Servicing and re-pasting & thermal pads. Here in Campbelltown we ensure that no matter what the situation we're standing by to help with all prebuilt, custom pcs & computers alike. </p>",
+            "link_text": "CONTACT US",
+            "link_url": "shopify://pages/contact",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_g6UTbC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/P1014880.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Service Areas",
+            "content": "<p>Our PC business proudly serves the diverse communities surrounding Campbelltown, NSW, Australia, including the  Macarthur region, Liverpool, Ingleburn, Leumeah, Bradbury, Rosemeadow, St Helens Park, Glen Alpine, Raby, Eschol Park, Blair Athol, Claymore, Eagle Vale, Airds, Kearns, Bowral, Mittagong, Wollongong, Bexley, and Penrith. </p>",
+            "link_text": "CONTACT US",
+            "link_url": "shopify://pages/contact",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_crqBTM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/P1014836.jpg",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Do it your way",
+            "content": "<p>EGPC assists clients with all their computer needs, ranging from budget conscious consultancy right through to supplying and building your custom computer.Do you want to be the next big streamer? A Youtube content creator?Are you working in CAD with 3D modeling?Are you working as a video technician with a lot of encoding work?</p>",
+            "link_text": "CONTACT US",
+            "link_url": "shopify://pages/contact",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "item_ETPfpQ",
+        "item_be9mJ6",
+        "item_hzbXch",
+        "item_gm3A3W",
+        "item_g6UTbC",
+        "item_crqBTM"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": true,
+        "subheading": "Gaming PCS FOR UNPARALLELED PERFORMANCE",
+        "title": "What We Offer",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#15002c",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "multi_column_mobile_pVKYd4": {
+      "type": "multi-column-mobile",
+      "blocks": {
+        "image_N6FFCt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TARTARUS_Ready_to_Ship_Gaming_PC-min.png",
+            "title": "Water Cooled PCS",
+            "caption": "<p>Distinguishing ourselves from the competition, we provide impeccably crafted, premium Water Cooled PCs. Our Water Cooled PCs deliver a noiseless, temperature-reducing solution with aesthetics to complement the experience. Sydney now boasts a destination for Water Cooled PCs, exclusively at Evolve Gaming PC.</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://products/boreas"
+          }
+        },
+        "image_B7mnTA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0824_EGPC-2.png",
+            "title": "Prebuilt Gaming PCS",
+            "caption": "<p>Looking for a prebuilt gaming PC? We offer a spectrum of options, from budget-friendly to high-performance solutions for those who prefer a hassle-free experience. But if you believe that a prebuilt gaming PC might not be a perfect fit, rest assured, we can still customize our offerings to cater to your unique needs</p>",
+            "link_text": "SHOP NOW",
+            "link_url": "shopify://collections"
+          }
+        },
+        "image_3jRiQY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0923_EGPC6.jpg",
+            "title": "Custom Gaming PCS",
+            "caption": "<p>The customized PC experience allows you to choose from a vast array of components, including options from international markets. We surpass our rivals in nearly every aspect to guarantee that we meet your elevated standards. You can even pick your preferred colours to suit your environment.</p>",
+            "link_text": "SHOP NOW",
+            "link_url": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "image_N6FFCt",
+        "image_B7mnTA",
+        "image_3jRiQY"
+      ],
+      "settings": {
+        "subheading": "WATERCOOLING",
+        "title": "What We Offer",
+        "show_arrows": true,
+        "background": "#15002c",
+        "text_color": "rgba(0,0,0,0)",
+        "arrow_bg_color": "#7800ff",
+        "arrow_icon_color": "#ffffff"
+      }
+    },
+    "image_with_text_RACKhR": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_4MeP4r": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1124_EGPC-19_1.png",
+            "tab_label": "WATERCOOLING",
+            "subheading": "WATERCOOLED CUSTOM GAMING PCS",
+            "title": "Watercooling is our passion",
+            "content": "<p>Look no further! We offer a wide array of Watercooled pc options, sourcing water cooling components from reputable wholesalers worldwide, both within and outside of Australia for all your prebuilt gaming pcs and gaming pc alike needs.</p><p>Take control of your gaming experience by handpicking your own PC parts. You can even elevate your existing Gaming PC to a whole new level of performance.</p><p>Watercooled PCs offer a range of benefits from a quieter system to a much cooler system temperate and aesthetics.</p><p>Speak to us to discuss your Watercooled pc journey. </p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item_3METUw": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/370676898_839692884611043_8024730890107856229_n.jpg",
+            "tab_label": "SERVICE",
+            "subheading": "Evolve your gaming experience",
+            "title": "Who do we take care of?",
+            "content": "<p>That's easy! EVERYONE.</p><p>With over 15 years worth of experience building the highest performing and visually stunning Prebuilt PCs, Evolve Gaming PC is your local Campbelltown Gaming PC specialist, here to make your next computer purchase simpler, faster and enjoyable.</p><p>Offering amazing service and Custom Gaming PCs & our Prebuilt Gaming PCs to all surrouding suburbs, Narellan, Gregory Hills, Oran Park, Camden, Bowral, Southern Highlands, Wollongong and so much more. </p><p>Our honest service, second to none. Offering the most exclusive custom pc & prebuilt gaming systems at the some of the best prices in Sydney. Nothing is left on the table when it comes to custom gaming pcs or prebuilt gaming pcs.</p>",
+            "button_text": "OUR RANGE",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_4MeP4r",
+        "item_3METUw"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 13,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "custom_class": "1"
+      }
+    },
+    "0c90a5b1-26af-4792-9410-a5049d29cabe": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "auto",
+        "subheading": "",
+        "title": "",
+        "content": "<h6><a href=\"https://evolvegamingpc.com.au/products/cables-live?variant=49262960083218\" title=\"https://evolvegamingpc.com.au/products/cables-live?variant=49262960083218\"><strong>BUILD YOUR SET NOW</strong></a></h6>",
+        "button_text": "",
+        "button_link": "shopify://products/cables-live",
+        "link_style": "button",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "bottom_right",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "tab_label": "Water Cooled PC’s",
+            "subheading": "",
+            "title": "Water Cooled PC’s",
+            "content": "<p>Watercooling PCs, peformance that meets perfection. Trailored to our customer specific specifications. You can even design your own watercoled pc loop, pick  your colours and parts from leading retailers and suppliers.</p><p>All pc parts are sourced from many locations in Australia and many suppliers around the world ensuring your  bespoke Gaming PC becomes a reality. </p><p>There's no limit to PC building, everything is fully customizable right here in Sydney with your bespoke PC Gaming company.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/looppc.jpg",
+            "tab_label": "Why Evolve Gaming?",
+            "subheading": "",
+            "title": "But Why Choose EVOLVE?",
+            "content": "<p> We are the foremost Gaming PC Builders in Sydney. Our extensive lineup includes meticulously crafted, customizable prebuilt gaming PCs. At Evolve Gaming PC, we have consistently delivered unbeatable value in our builds, coupled with industry-leading pre-sale and post-sale support. As your trusted local PC Builder, we've made it our mission to cater to a wide audience, be it gaming enthusiasts, 3D designers, professionals, Autocad or content creators. Our commitment is to provide top-of-the-line, user-specific solutions at budget-friendly prices.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 15,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "custom_class": "1"
+      }
+    },
+    "ec6ca751-923a-4a54-bc43-6d0c917d7b15": {
+      "type": "custom-html",
+      "disabled": true,
+      "custom_css": [
+        ".es-widget-title-container {display: none;}",
+        ".Main__Container-sc-1w4nyzp-0 a {display: none !important;}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<script src=\"https://static.elfsight.com/platform/platform.js\" data-use-service-core defer></script> <div class=\"elfsight-app-8e1197a0-50e2-42e4-a988-75b018988490\" data-elfsight-app-lazy></div>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "#0f0f0f",
+        "text_color": "#ffffff"
+      }
+    },
+    "30ce1f3d-71ae-43e3-86b8-c1877a8ff9cd": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "subheading": "SYDNEYS BESPOKE PC BUILDING COMPANY",
+        "title": "MEET THE TEAM",
+        "content": "<p>Here at Evolve we wanted to always push the level of service, trust and respect with our customers.<br/><br/>Offering tailored systems to young, old and everyone in between.<br/><br/>It doesn't matter if you're after a prebuilt pc, a custom pc, help building your pc or something truly special with your desired gaming system.<br/><br/>Are you ready to jump into the world of a PC enthusiast?</p>",
+        "button_text": "CHECK THE ENTIRE RANGE",
+        "button_link": "shopify://collections/all",
+        "background_type": "full_width",
+        "text_position": "left",
+        "text_alignment": "center",
+        "text_background": "#7808ff",
+        "text_color": "#ffffff",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "cb0df520-8a5e-47e2-99fe-35a1dbb5fea7": {
+      "type": "multi-column",
+      "blocks": {
+        "template--20503774232850__cb0df520-8a5e-47e2-99fe-35a1dbb5fea7-item-1": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Water Cooled PCS",
+            "content": "<p>Distinguishing ourselves from the competition, we provide impeccably crafted, premium Water Cooled PCs. Our Water Cooled PCs deliver a noiseless, temperature-reducing solution with aesthetics to complement the experience. Sydney now boasts a destination for Water Cooled Gaming PCs, exclusively at Evolve Gaming PC.</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://products/boreas",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20503774232850__cb0df520-8a5e-47e2-99fe-35a1dbb5fea7-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/0124_EGPC-16.png",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Prebuilt Gaming PCS",
+            "content": "<p>Looking for a prebuilt gaming PC? We offer a spectrum of options, from budget-friendly to high-performance solutions for those who prefer a hassle-free experience. But if you believe that a prebuilt gaming PC might not be a perfect fit, rest assured, we can still customize our offerings to cater to your unique needs. There's no limitations.</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--20503774232850__cb0df520-8a5e-47e2-99fe-35a1dbb5fea7-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/0923_EGPC8.jpg",
+            "image_width": 98,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Custom Gaming PCS",
+            "content": "<p>The customized Prebuilt PC experience allows you to choose from a vast array of components, including options from international markets. We surpass our rivals in nearly every aspect to guarantee that we meet your elevated standards. You can even pick your preferred colours to suit your environment.</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections",
+            "link_style": "button",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "b1e6d7af-3ac1-4cfb-8017-007943cf7f67": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Your content",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "1000c08a-4031-4268-96b0-558fe291b99e": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Your content",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "item_GRR3yj": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "Your content",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503774232850__cb0df520-8a5e-47e2-99fe-35a1dbb5fea7-item-1",
+        "template--20503774232850__cb0df520-8a5e-47e2-99fe-35a1dbb5fea7-item-2",
+        "template--20503774232850__cb0df520-8a5e-47e2-99fe-35a1dbb5fea7-item-3",
+        "b1e6d7af-3ac1-4cfb-8017-007943cf7f67",
+        "1000c08a-4031-4268-96b0-558fe291b99e",
+        "item_GRR3yj"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "subheading": "Gaming PCS FOR UNPARALLELED PERFORMANCE",
+        "title": "What We Offer",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#15002c",
+        "text_color": "#ffffff"
+      }
+    },
+    "google_review_static_ynYEAD": {
+      "type": "google-review-static",
+      "settings": {
+        "google-review-static-rating": "5.0",
+        "google-review-static-customers": "from Over 350+ Customer Reviews",
+        "google-review-static-text": "We are Sydey's most bespoke tailored gaming pc service, Prebuilt Pcs, Watercooled PCs, Here at Evolve every PC is different because all of our clients are different."
+      }
+    },
+    "05f13469-b84d-44b8-9621-8039b2d4ff73": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 90,
+            "title": "SHIPPING AUS WIDE",
+            "content": "<p>3 Year Warranty + Extended!</p>"
+          }
+        },
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon_width": 90,
+            "title": "Customer service",
+            "content": "<p>We're available Mon-Sun to answer any enquiries </p>"
+          }
+        },
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon_width": 90,
+            "title": "Secure payment",
+            "content": "<p>Your payment information is processed securely.</p>"
+          }
+        },
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 90,
+            "title": "Contact us",
+            "content": "<p>Need to contact us ? admin@evolvegamingpc.com.au</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-1",
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-2",
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-3",
+        "template--20503774232850__05f13469-b84d-44b8-9621-8039b2d4ff73-item-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": "#0f0f0f",
+        "text_color": "#ffffff"
+      }
+    },
+    "51844a52-357e-4093-a84f-f577cb03e5dc": {
+      "type": "logo-list",
+      "blocks": {
+        "template--20503774232850__51844a52-357e-4093-a84f-f577cb03e5dc-logo-1": {
+          "type": "logo",
+          "settings": {
+            "link": "https://www.facebook.com/EvolveGamingPC"
+          }
+        },
+        "template--20503774232850__51844a52-357e-4093-a84f-f577cb03e5dc-logo-2": {
+          "type": "logo",
+          "settings": {
+            "link": "https://www.instagram.com/evolve_gamingpc/"
+          }
+        },
+        "template--20503774232850__51844a52-357e-4093-a84f-f577cb03e5dc-logo-3": {
+          "type": "logo",
+          "settings": {
+            "link": "https://www.tiktok.com/@evolvegamingpc"
+          }
+        },
+        "233ef93e-7d85-4d0f-a71e-703f876fc9d0": {
+          "type": "logo",
+          "settings": {
+            "link": "https://www.youtube.com/channel/UCigtgd5kGB6dyJaM82Sfi-g"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503774232850__51844a52-357e-4093-a84f-f577cb03e5dc-logo-1",
+        "template--20503774232850__51844a52-357e-4093-a84f-f577cb03e5dc-logo-2",
+        "template--20503774232850__51844a52-357e-4093-a84f-f577cb03e5dc-logo-3",
+        "233ef93e-7d85-4d0f-a71e-703f876fc9d0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "Find Us On Our Socials",
+        "button_text": "",
+        "button_link": "",
+        "stack_logos": true,
+        "background": "#262626",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#ffffff",
+        "logo_background": "#ffffff"
+      }
+    },
+    "image-with-text-block": {
+      "type": "image-with-text-block",
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "Sydneys BESPOKE PC Building company",
+        "title": "MEet the team",
+        "content": "<p>Here at Evolve we wanted to always push the level of service, trust and respect with our customers. </p><p>Offering tailored systems to young, old and everyone in between. </p><p>It doesn't matter if you're after a prebuilt pc, a custom pc, help building your pc or something truly special with your desired gaming system.</p><p>Are you ready to jump into the world of a PC enthusiast?</p>",
+        "button_text": "Check the entire range",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_position": "right",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#830bff",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "timeline": {
+      "type": "timeline",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "label": "2000",
+            "title": "Your heading",
+            "content": "<p>Write content about your store</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "label": "2010",
+            "title": "Your heading",
+            "content": "<p>Write content about your store</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "label": "2020",
+            "title": "Your heading",
+            "content": "<p>Write content about your store</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "featured-product": {
+      "type": "featured-product",
+      "blocks": {
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity-selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#282828",
+            "atc_button_text_color": "#ffffff",
+            "buy_now_button_background": "#9e29ee",
+            "buy_now_button_text_color": "#ffffff"
+          }
+        },
+        "235aa88b-2eef-4119-9857-9da386f2e88c": {
+          "type": "description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "variant-picker",
+        "quantity-selector",
+        "buy-buttons",
+        "235aa88b-2eef-4119-9857-9da386f2e88c"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "athena",
+        "subheading": "",
+        "title": "ON SALE",
+        "show_vendor": true,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": false,
+        "show_share_buttons": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6aa10d7e-1373-4abe-a7d3-c3b08ef84d6f": {
+      "type": "slideshow-style-2",
+      "blocks": {
+        "template--20503774232850__6aa10d7e-1373-4abe-a7d3-c3b08ef84d6f-image-1": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle_right",
+            "subheading": "",
+            "title": "AMD",
+            "title_2": "Ryzen Gaming",
+            "slidercontent": "",
+            "button_1_text": "View Details",
+            "button_1_link": "shopify://collections/all",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#ffa816",
+            "button_background": "#7808ff",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--20503774232850__6aa10d7e-1373-4abe-a7d3-c3b08ef84d6f-image-2": {
+          "type": "image",
+          "settings": {
+            "text_position": "middle_left",
+            "subheading": "",
+            "title": "Power At",
+            "title_2": "Your Fingertips",
+            "slidercontent": "Australia's bespoke PC builders",
+            "button_1_text": "View Details",
+            "button_1_link": "shopify://collections/all",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "text_color_hightlight": "#7fd000",
+            "button_background": "#7808ff",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--20503774232850__6aa10d7e-1373-4abe-a7d3-c3b08ef84d6f-image-1",
+        "template--20503774232850__6aa10d7e-1373-4abe-a7d3-c3b08ef84d6f-image-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "small",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 8,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_style_2_LyUyDq": {
+      "type": "image-with-text-style-2",
+      "blocks": {
+        "item_9PHp7J": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/sleeved.png",
+            "tab_label": "Item 3",
+            "subheading": "",
+            "title": "YOUR COLOURS",
+            "title_2": "YOUR COMBINATION",
+            "title_3": "YOUR DESIGN",
+            "content": "<p>CREATE ANY CABLE DESIGN YOU WANT<br/><br/>With over 250+ Custom Colors available handcrafted by our team at Evolve Gaming in Sydney. More variations than stars in our Universe. Build it your way to your specific taste. Try our interactive Sleeved PC Cable builder below.</p>",
+            "button_text": "START CUSTOMiZING",
+            "button_text_2": "SEE ALL",
+            "button_link_2": "https://evolvegamingpc.com.au/pages/custom-pc-sleeved-cables",
+            "button_link": "https://evolvegamingpc.com.au/products/cables-live?variant=49262960083218"
+          }
+        }
+      },
+      "block_order": [
+        "item_9PHp7J"
+      ],
+      "custom_css": [
+        "[reveal] {opacity: 1;}",
+        "split-lines {padding-bottom: 10px;}",
+        ".button-wrapper.fgc-custom__button-wrapper a:first-child {background: #7808ff; color: #fff;}",
+        ".button-wrapper.fgc-custom__button-wrapper a:first-child:after {color: #fff;}",
+        ".image-with-text__text-wrapper p::first-line {font-weight: bold; white-space: nowrap;}",
+        ".image-with-text__text-wrapper {padding-right: 18%;}",
+        "h3.heading.h3.orbitron-text {font-size: 50px;}",
+        ".image-with-text__image-wrapper {overflow: visible;}"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "center",
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text_with_icons_Rh3w79": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_FpjkJF": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/GCGD_Evolve_Website_Slices-22.webp",
+            "custom_icon_width": 50,
+            "title": "Free shipping",
+            "content": "<p>3 Year Warranty<br/>+ Extended!</p>"
+          }
+        },
+        "item_DQcNwy": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify://shop_images/GCGD_Evolve_Website_Slices-23.webp",
+            "custom_icon_width": 50,
+            "title": "3 YEAR WARRANTY",
+            "content": "<p>Your payment information is processed securely.</p>"
+          }
+        },
+        "item_Lazpi3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-like",
+            "custom_icon": "shopify://shop_images/GCGD_Evolve_Website_Slices-24.webp",
+            "custom_icon_width": 50,
+            "title": "CUSTOMER FOCUSED",
+            "content": "<p>we're available Mon-Sun to answer any enquiries.</p>"
+          }
+        },
+        "item_BXhYQf": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon": "shopify://shop_images/GCGD_Evolve_Website_Slices-25.webp",
+            "custom_icon_width": 50,
+            "title": "Contact us",
+            "content": "<p>Need to contact us ?<br/>admin@evolvegamingpc.com.au</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_FpjkJF",
+        "item_DQcNwy",
+        "item_Lazpi3",
+        "item_BXhYQf"
+      ],
+      "custom_css": [
+        ".text-with-icons__content-wrapper {text-align: left;}",
+        ".text-with-icons__item .text-with-icons__icon-wrapper > * {margin: unset;}"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "center_image": "shopify://shop_images/Image.png"
+      }
+    },
+    "image_with_text_TePjJA": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_4MXXt8": {
+          "type": "item",
+          "settings": {
+            "tab_label": "Item",
+            "subheading": "Subheading",
+            "title": "Image with text",
+            "content": "<p>Use image with text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_4MXXt8"
+      ],
+      "disabled": true,
+      "name": "Image with text",
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "custom_class": "1"
+      }
+    }
+  },
+  "order": [
+    "4d5dc08d-d1bd-43f3-8640-a9b6c3a7f64e",
+    "slideshow",
+    "featured-collections",
+    "featured_collections_8LmjmH",
+    "image_with_text_style_2_ftVDJQ",
+    "712ac5a4-1cd2-4539-9280-4dab8477947f",
+    "multi_column_desktop_YK8myM",
+    "multi_column_mobile_pVKYd4",
+    "image_with_text_RACKhR",
+    "0c90a5b1-26af-4792-9410-a5049d29cabe",
+    "image-with-text",
+    "ec6ca751-923a-4a54-bc43-6d0c917d7b15",
+    "30ce1f3d-71ae-43e3-86b8-c1877a8ff9cd",
+    "cb0df520-8a5e-47e2-99fe-35a1dbb5fea7",
+    "google_review_static_ynYEAD",
+    "05f13469-b84d-44b8-9621-8039b2d4ff73",
+    "51844a52-357e-4093-a84f-f577cb03e5dc",
+    "image-with-text-block",
+    "timeline",
+    "featured-product",
+    "6aa10d7e-1373-4abe-a7d3-c3b08ef84d6f",
+    "image_with_text_style_2_LyUyDq",
+    "text_with_icons_Rh3w79",
+    "image_with_text_TePjJA"
+  ]
+}

@@ -1,0 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "page_width": "medium"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "1e9fef8c-ebb2-45e5-8951-7e365c6d5b0c": {
+          "type": "category",
+          "settings": {
+            "title": "1. General questions"
+          }
+        },
+        "5d89b6be-06ac-4568-bc76-708ff4d67cc2": {
+          "type": "question",
+          "settings": {
+            "title": "How can I contact you?",
+            "answer": "<p>You have options! Call on 13800 282 433 from 9am-9pm. You can also reach us via our email admin@evolvegamingpc.com.au. Alternatively you're welcome to visit us in our shop here in Campbelltown NSW.</p>"
+          }
+        },
+        "48e53a06-428a-439e-ba42-2c214f9e3a04": {
+          "type": "question",
+          "settings": {
+            "title": "I want to buy a Gaming PC but unsure where to start?",
+            "answer": "<p>A long time ago we were in the same position, so we understand the complexity and range of PCs out there can be overwhelming.<br/><br/>The best way to start is to ask questions, go through all the options from looks, to performance to budget. This is where EGPC comes in.<br/><br/>Here at Evolve we will ensure you get the best possible PC for what you're wanting to spend.</p>"
+          }
+        },
+        "3fb4d191-a2d2-4a86-a035-e8574c9f7598": {
+          "type": "question",
+          "settings": {
+            "title": "Does my PC come with Windows installed?",
+            "answer": "<p>Absolutely! All our gaming PCs come pre-installed with your choice of either Windows 11 or Windows 10, which are activated and ready to use straight out of the box. <br/><br/>No need for additional installation or activation - simply plug in your PC and you're set to start gaming.</p>"
+          }
+        },
+        "e2c98d74-7dd0-446c-a722-c101a7d9ae79": {
+          "type": "question",
+          "settings": {
+            "title": "What's your ABN?",
+            "answer": "<p>Our ABN is 11 656 524 293</p>"
+          }
+        },
+        "986795c9-81e3-4046-8b7a-d5987b236314": {
+          "type": "category",
+          "settings": {
+            "title": "2. Shipping"
+          }
+        },
+        "04bbe60d-dbec-404c-b0a1-6bb6252929d0": {
+          "type": "question",
+          "settings": {
+            "title": "What shipping service do you offer?",
+            "answer": "<p>We use AUSPOST, Startrack and TNT depending on location around AUS. Not only that! Your product comes with <em><strong>FULL insurance coverage</strong></em> of the amount. Meaning if something happens we're covered and so are you! <br/><br/>AND ITS FREE AUSTRALIA WIDE!</p>"
+          }
+        },
+        "a4e6f83b-9b0d-4615-a6af-c6379c8adb1e": {
+          "type": "question",
+          "settings": {
+            "title": "Can I pick my order up in person?",
+            "answer": "<p>Absolutely you can! We tend to prefer it, this way we can discuss the applications and setup in person.<br/><br/>Our dispatch times are unbeatable but sometimes we're left up to the 'shipping gods'. Which might reflect a day lag from collection to dropoff.<br/><br/>When it comes to our timeframes, EVOLVE prioritizes the highest quality of testing and quality control above all else.</p><p>If you're concerned about delivery or struggling to pick a collection timeframe we're more than happy to go that extra mile if required! </p><p>Do not hesitate to contact us at <a href=\"mailto:admin@evolvegamingpc.com.au\" title=\"mailto:admin@evolvegamingpc.com.au\">admin@evolvegamingpc.com.au </a>or 1300 282 433.</p>"
+          }
+        },
+        "9fb2cd49-9b17-4e00-99d7-5f7c43ee33ff": {
+          "type": "category",
+          "settings": {
+            "title": "3. Payment Questions"
+          }
+        },
+        "2bb7ca5a-cb64-44fe-b48b-178d342fdeaf": {
+          "type": "question",
+          "settings": {
+            "title": "What payment methods do you accept?",
+            "answer": "<p>We accept a variety of payment methods including credit cards (Visa, MasterCard, American Express)and Paypal.</p><p>We now accept Afterpay also!</p>"
+          }
+        },
+        "99fd2922-c5a5-4d58-9732-5e58d8b52fcb": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer installment payment options?",
+            "answer": "<p>We offer a rather unique method here at Evolve. We do allow our customers to make a 50% deposit and 50% on collection should they require it. Or rather not pay up front in full.</p>"
+          }
+        },
+        "1106c2d2-8bc6-41b0-8f70-f2f09ca9c7bc": {
+          "type": "question",
+          "settings": {
+            "title": "Is my payment information secure?",
+            "answer": "<p>Yes, we take the security of our customers' payment information seriously. All transactions are processed securely and we use industry-standard encryption technology to protect your information.</p>"
+          }
+        },
+        "15bfa4ee-e3f2-412b-a421-97378a583c6c": {
+          "type": "category",
+          "settings": {
+            "title": "4. Warranty"
+          }
+        },
+        "97ddb846-75f6-4b69-99b9-6fc34cb75c28": {
+          "type": "question",
+          "settings": {
+            "title": "Warranty Definitions",
+            "answer": "<p>We go that extra mile... when no one else does!</p><p>Should something go wrong? You won't go without your PC for weeks. We repair or replace ON THE SPOT where possible at the worst case supply the component within 2 working days for a fix to be supplied to our customer.</p><p>EVOLVE WARRANTS hardware product against defects in merchandise and workmanship for a period of 3 (THREE) Years from the Date of Original Retail Purchase </p><p>PLUS!</p><p>If something goes wrong outside of this period we will repair / replace the component at the wholesale COST as well as do the labour repair work for absolutely free. </p><p>Now that's unbeatable.</p>"
+          }
+        },
+        "c149574d-5dcd-4a7e-b8cc-a202790152cf": {
+          "type": "category",
+          "settings": {
+            "title": "5. Contact Questions"
+          }
+        },
+        "7fefc7a3-2030-4c08-992c-2a826a0d396a": {
+          "type": "question",
+          "settings": {
+            "title": "How can I contact customer service?",
+            "answer": "<p>You can reach our customer service team by emailing <a href=\"mailto:admin@evolvegamingpc.com.au\" title=\"mailto:admin@evolvegamingpc.com.au\">admin@evolvegamingpc.com.au</a> or by calling our number at 1300 282 433.</p>"
+          }
+        },
+        "53b8e2a7-7bb7-4959-a321-fee596f98dd2": {
+          "type": "question",
+          "settings": {
+            "title": "What are your business hours?",
+            "answer": "<p>Our business hours are Mon - Fri from 9:30 am to 7 pm<br/><br/>Sat - Sun from 9am to 9pm AEST</p>"
+          }
+        },
+        "c8175cef-946b-41d0-9c34-17b9f4fccc38": {
+          "type": "question",
+          "settings": {
+            "title": "How can I provide feedback?",
+            "answer": "<p>We welcome and value your feedback! You can leave us a message through our contact page on our website or email us at <a href=\"mailto:admin@evolvegamingpc.com.au\" title=\"mailto:admin@evolvegamingpc.com.au\">admin@evolvegamingpc.com.au</a>.</p>"
+          }
+        },
+        "1ab18e8a-f885-4cea-9d6a-293108c7b597": {
+          "type": "question",
+          "settings": {
+            "title": "Do you have a physical address?",
+            "answer": "<p>We do indeed!. You're welcome to visit the team located at 125 Kellerman Dr, St Helens Park Campbelltown NSW.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1e9fef8c-ebb2-45e5-8951-7e365c6d5b0c",
+        "5d89b6be-06ac-4568-bc76-708ff4d67cc2",
+        "48e53a06-428a-439e-ba42-2c214f9e3a04",
+        "3fb4d191-a2d2-4a86-a035-e8574c9f7598",
+        "e2c98d74-7dd0-446c-a722-c101a7d9ae79",
+        "986795c9-81e3-4046-8b7a-d5987b236314",
+        "04bbe60d-dbec-404c-b0a1-6bb6252929d0",
+        "a4e6f83b-9b0d-4615-a6af-c6379c8adb1e",
+        "9fb2cd49-9b17-4e00-99d7-5f7c43ee33ff",
+        "2bb7ca5a-cb64-44fe-b48b-178d342fdeaf",
+        "99fd2922-c5a5-4d58-9732-5e58d8b52fcb",
+        "1106c2d2-8bc6-41b0-8f70-f2f09ca9c7bc",
+        "15bfa4ee-e3f2-412b-a421-97378a583c6c",
+        "97ddb846-75f6-4b69-99b9-6fc34cb75c28",
+        "c149574d-5dcd-4a7e-b8cc-a202790152cf",
+        "7fefc7a3-2030-4c08-992c-2a826a0d396a",
+        "53b8e2a7-7bb7-4959-a321-fee596f98dd2",
+        "c8175cef-946b-41d0-9c34-17b9f4fccc38",
+        "1ab18e8a-f885-4cea-9d6a-293108c7b597"
+      ],
+      "custom_css": [
+        "h1 {font-size: 45px;}",
+        ".vertical-breather {padding-top: 20px;}",
+        ".faq__category.heading {background: none; color: #7808ff;}",
+        ".scroll-spy {position: inherit; box-shadow: none;}",
+        ".faq-navigation {width: 100%;}"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "title": "Frequently Asked Questions",
+        "content": "<p>Please take a look at the sections below to find the answers you’re looking for. If you can’t find what you’re looking for or have additional questions, please don’t hesitate to contact us. We’re always here to help!</p>",
+        "background": "#262626",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq"
+  ]
+}

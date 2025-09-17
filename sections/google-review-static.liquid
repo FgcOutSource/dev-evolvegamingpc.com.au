@@ -1,0 +1,88 @@
+<style>
+    #shopify-section-{{ section.id }} #review-static{
+      display: flex;
+      flex-direction: row;
+      max-width: 800px;
+      margin: 0 auto 90px;
+    }
+    #shopify-section-{{ section.id }} #review-static .g-logo{
+      padding-right: 10px;
+    }
+    #shopify-section-{{ section.id }} #review-static .g-content{
+      padding: 0 10px;
+    }
+    #shopify-section-{{ section.id }} #review-static .g-content p{
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    #shopify-section-{{ section.id }} #review-static .g-content p img{
+      width: 80px;
+      position: relative;
+      top: 7px;
+    }
+    #shopify-section-{{ section.id }} #review-static .g-content p span{
+      color: #f58220;
+    }
+</style>
+
+<section class="section section--flush">
+    <div class="container">
+        <div id="review-static">
+            <div class="g-logo">
+              <svg width="42px" height="43px" viewBox="0 0 42 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+                <title>Group 9</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="pre-packing-service" transform="translate(-297.000000, -470.000000)">
+                    <g id="Group" transform="translate(297.000000, 465.000000)">
+                      <g id="Group-9" transform="translate(0.000000, 5.000000)">
+                        <path d="M42.0058,21.4372 C42.0058,20.0502 41.8778,18.6952 41.6418,17.3812 L39.9778,17.3812 L33.4858,17.3812 L21.4378,17.3812 L21.4378,25.4932 L33.6648,25.4932 C32.8718,28.3002 31.2038,30.7022 28.9718,32.3592 L35.2818,37.3802 C39.4408,33.4562 42.0058,27.7692 42.0058,21.4372" id="Fill-1" fill="#3284FF"></path>
+                        <path d="M21.7011,8.6906 C24.7751,8.6906 27.5441,9.8036 29.6891,11.6566 L35.5281,5.7336 C31.8821,2.1776 26.9591,0.0006 21.4371,0.0006 C13.2071,0.0006 5.8681,4.8346 2.2971,11.8696 L9.4651,17.3356 C11.2981,12.2966 16.1681,8.6906 21.7011,8.6906" id="Fill-3" fill="#FF3424"></path>
+                        <path d="M2.4311,31.2639 L9.3441,25.7649 C8.9231,24.4929 8.6911,23.1369 8.6911,21.7269 C8.6911,20.1859 8.9661,18.7079 9.4651,17.3349 L2.2971,11.8699 C0.8351,14.7509 0.0001,17.9979 0.0001,21.4369 C0.0001,24.9809 0.8861,28.3199 2.4311,31.2639" id="Fill-5" fill="#FFBB00"></path>
+                        <path d="M9.3437,25.7648 L2.4307,31.2638 C6.0507,38.1588 13.3087,42.8748 21.4377,42.8748 C26.8357,42.8748 31.6617,40.7958 35.2817,37.3798 L28.9717,32.3598 C26.9417,33.8688 24.4457,34.7638 21.7007,34.7638 C16.0397,34.7638 11.0727,30.9888 9.3437,25.7648" id="Fill-7" fill="#26B14C"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="g-content">
+              <p>With <span>{{ section.settings.google-review-static-rating }}</span> <img src="https://cdn.shopify.com/s/files/1/0807/0522/4978/files/five-stars-1.png?v=1707868062" alt="star rating"> <span>{{ section.settings.google-review-static-customers }}</span> {{ section.settings.google-review-static-text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Google Review Static",
+  "class": "shopify-section--google-review-static",
+  "settings": [
+    {
+      "type": "text",
+      "id": "google-review-static-rating",
+      "label": "Rating",
+      "default": "Your rating, e.g., 5.0"
+    },
+    {
+      "type": "text",
+      "id": "google-review-static-customers",
+      "label": "Customers Number",
+      "default": "Customers Number"
+    },
+    {
+      "type": "text",
+      "id": "google-review-static-text",
+      "label": "Short Text",
+      "default": "Short Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Google Review Static"
+    }
+  ]
+}
+{% endschema %}

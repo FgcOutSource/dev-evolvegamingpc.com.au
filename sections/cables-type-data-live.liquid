@@ -1,0 +1,90 @@
+<style>
+.cables-type-data{
+	display: none;
+}
+</style>
+
+{% if section.blocks.size > 0 %}
+<section class="cables-type-data">
+    <div class="plug-container" data-title="{{ section.settings.title }}">  
+	  {%- for block in section.blocks -%} 
+		<div class="plugs" 
+			data-title="{{ block.settings.title }}"
+			data-pin-num="{{ block.settings.pin_num }}"
+		  data-white-plug-img="{{ block.settings.white_plug_image | img_url: '600x600' }}"
+		  data-black-plug-img="{{ block.settings.black_plug_image | img_url: '600x600' }}"
+		  data-actual-pin-number="{{ block.settings.actual_pin_number }}"
+			>
+		</div>
+	  {% endfor %}
+	</div>
+ </section>
+ {% endif %}
+
+{% schema %}
+
+{
+  "name": "Cables Type Data",
+  "class": "shopify-section--cables-type-data",
+  "disabled_on": {
+    "groups": ["custom.overlay"]
+  },
+  "max_blocks": 50,
+  "blocks": [
+      {
+        "type": "color",
+        "name": "Plug item",
+        "settings": [
+          	{
+		      "type": "header",
+		      "content": "Plug"
+		    },
+		    {
+			   "type": "text",
+			   "id": "title",
+			   "label": "Title"
+			},
+		    {
+			   "type": "number",
+			   "id": "pin_num",
+			   "label": "Pin number"
+			},
+		    {
+			   "type": "text",
+			   "id": "actual_pin_number",
+			   "label": "Actual pin number",
+			   "info": "For example:12pin"
+			},
+			{
+		      "type": "image_picker",
+		      "id": "white_plug_image",
+		      "label": "White Color Plug Image",
+		      "info": "400 x 400px .jpg recommen."
+		    },
+			{
+		      "type": "image_picker",
+		      "id": "black_plug_image",
+		      "label": "Black Color Plug Image",
+		      "info": "400 x 400px .jpg recommen."
+		    }
+        ]
+      }
+  ],
+  "settings": [
+	{
+		"type": "header",
+		"content": "Plug"
+	},
+	{
+		"type": "text",
+		"id": "title",
+		"label": "Title"
+	}
+  ],
+  "presets": [
+    {
+      "name": "Cables Type Data"
+    }
+  ]
+}
+{% endschema %}
