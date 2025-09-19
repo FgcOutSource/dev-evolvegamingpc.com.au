@@ -17,10 +17,35 @@
         "page_width": "medium"
       }
     },
-    "image_with_text_overlay_jFJgQA": {
-      "type": "image-with-text-overlay",
-      "custom_css": [],
-      "name": "Image with text overlay",
+    "image_with_text_overlay_style_2_HH9cNc": {
+      "type": "image-with-text-overlay-style-2",
+      "blocks": {
+        "button_zDGxPU": {
+          "type": "button",
+          "settings": {
+            "button_text": "Know what you’re after?",
+            "button_link": "",
+            "button_bg_color": "",
+            "button_text_color": "#ffffff",
+            "button_no_bg": false
+          }
+        },
+        "button_MAm4fa": {
+          "type": "button",
+          "settings": {
+            "button_text": "Team Is standing by",
+            "button_link": "",
+            "button_bg_color": "#7808ff",
+            "button_text_color": "#ffffff",
+            "button_no_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "button_zDGxPU",
+        "button_MAm4fa"
+      ],
+      "name": "Image with text overlay style 2",
       "settings": {
         "reveal_on_scroll": false,
         "section_height": "auto",
@@ -28,16 +53,12 @@
         "subheading": "",
         "title": "WATERCOOLING SERVICE",
         "content": "<p>Keep your system running at peak performance with our <strong>watercooling pc maintenance services</strong>. From coolant flushes to refills and pump checks, we make sure your PC stays cool, quiet, and reliable all year round.</p>",
-        "button_text": "Team is standing by",
-        "button_link": "",
-        "link_style": "button",
+        "link_style": "link",
         "background_type": "full_width",
         "text_width": "medium",
         "text_position": "middle_center",
-        "custom_class": "service-horizontal_line",
+        "custom_class": "custom-class",
         "text_color": "#ffffff",
-        "button_background": "#7808ff",
-        "button_text_color": "#ffffff",
         "overlay_color": "#262626",
         "overlay_opacity": 10
       }
@@ -247,7 +268,7 @@
   },
   "order": [
     "main",
-    "image_with_text_overlay_jFJgQA",
+    "image_with_text_overlay_style_2_HH9cNc",
     "gallery_custom_6AypQt",
     "featured_collections_WXheJT",
     "image_with_text_pKHBkJ",
