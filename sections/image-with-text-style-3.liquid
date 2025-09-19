@@ -26,48 +26,32 @@
       {%- assign button_text_color = section.settings.button_text_color -%}
     {%- endif -%}
 
-    {%- if section.settings.section_background == 'rgba(0,0,0,0)' -%}
-      {%- assign section_background = '#1f2937' -%}
-    {%- else -%}
-      {%- assign section_background = section.settings.section_background -%}
-    {%- endif -%}
-
     --heading-color: {{ heading_color.red }}, {{ heading_color.green }}, {{ heading_color.blue }};
     --text-color: {{ text_color.red }}, {{ text_color.green }}, {{ text_color.blue }};
     --button-background: {{ button_background.red }}, {{ button_background.green }}, {{ button_background.blue }};
     --button-text-color: {{ button_text_color.red }}, {{ button_text_color.green }}, {{ button_text_color.blue }};
-    --section-background: {{ section_background }};
     --section-padding: {{ section.settings.section_padding }}px;
     --logo-size: {{ section.settings.logo_size }}px;
   }
 
   #shopify-section-{{ section.id }} .pc-maintenance-header {
-    background-color: var(--section-background);
     padding: var(--section-padding) 1.5rem;
-    {% if section.settings.reveal_on_scroll %}opacity: 0; transform: translateY(20px); transition: all 0.6s ease;{% endif %}
   }
-
-  {% if section.settings.reveal_on_scroll %}
-    #shopify-section-{{ section.id }} .pc-maintenance-header.revealed {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  {% endif %}
 
   #shopify-section-{{ section.id }} .header-container {
     max-width: {% if is_boxed %}1200px{% else %}100%{% endif %};
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: flex-end;
+    gap: 5.5rem;
   }
 
   #shopify-section-{{ section.id }} .logo-content {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    flex: 1;
+    justify-content: center;
+    gap: 2.5rem;
   }
 
   #shopify-section-{{ section.id }} .logo-circle {
@@ -109,17 +93,13 @@
 
   #shopify-section-{{ section.id }} .content-text p {
     color: rgb(var(--text-color));
-    font-size: {{ section.settings.text_size }}px;
     margin: 0;
     max-width: 28rem;
-    line-height: 1.4;
   }
 
   #shopify-section-{{ section.id }} .book-button {
-    background-color: rgb(var(--button-background));
     color: rgb(var(--button-text-color));
     padding: {{ section.settings.button_padding_y }}px {{ section.settings.button_padding_x }}px;
-    border-radius: {{ section.settings.button_border_radius }}px;
     font-weight: 600;
     font-size: {{ section.settings.button_text_size }}px;
     border: none;
@@ -195,7 +175,6 @@
     #shopify-section-{{ section.id }} .content-text p {
       margin-bottom: 1.5rem;
       padding: 0 0.5rem;
-      font-size: calc({{ section.settings.text_size }}px * 0.9);
     }
 
     #shopify-section-{{ section.id }} .book-button {
@@ -208,13 +187,21 @@
 </style>
 
 <section class="section {{ section.settings.custom_class }} section-{{ section.id }}">
-  <div {% if is_boxed %}class="container"{% endif %}>
-    <header class="pc-maintenance-header" {% if section.settings.reveal_on_scroll %}data-reveal-on-scroll{% endif %}>
+  <div
+    {% if is_boxed %}
+      class="container"
+    {% endif %}
+  >
+    <header class="pc-maintenance-header">
       <div class="header-container">
         <div class="logo-content">
           <div class="logo-circle">
             {% if section.settings.image != blank %}
-              {{ section.settings.image | image_url: width: 200 | image_tag: class: 'logo-image', alt: section.settings.heading }}
+              {{
+                section.settings.image
+                | image_url: width: 200
+                | image_tag: class: 'logo-image', alt: section.settings.heading
+              }}
             {% elsif section.settings.custom_icon != blank %}
               {{ section.settings.custom_icon }}
             {% else %}
@@ -234,7 +221,7 @@
           </div>
         </div>
         {% if section.settings.button_text != blank %}
-          <a href="{{ section.settings.button_link | default: '#' }}" class="book-button">
+          <a href="{{ section.settings.button_link | default: '#' }}" class="button button--primary book-button">
             {{ section.settings.button_text }}
           </a>
         {% endif %}
@@ -242,23 +229,6 @@
     </header>
   </div>
 </section>
-
-{% if section.settings.reveal_on_scroll %}
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const element = document.querySelector('#shopify-section-{{ section.id }} [data-reveal-on-scroll]');
-    if (element) observer.observe(element);
-  });
-</script>
-{% endif %}
 
 {% schema %}
 {
@@ -268,13 +238,6 @@
     {
       "type": "header",
       "content": "Layout Settings"
-    },
-    {
-      "type": "checkbox",
-      "id": "reveal_on_scroll",
-      "label": "Reveal on scroll",
-      "info": "Show animation when section becomes visible.",
-      "default": true
     },
     {
       "type": "select",
@@ -335,39 +298,33 @@
       "content": "Content"
     },
     {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "PC MAINTENANCE & REPAIR"
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description",
-      "default": "Is your PC not performing the way it should or just needs a once over? From basic repairs through to repasting GPUs, we've got you covered."
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button text",
-      "default": "BOOK NOW"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button link"
-    },
-    {
       "type": "image_picker",
       "id": "image",
       "label": "Logo Image",
       "info": "Upload an image to use as logo. Will override custom icon if provided."
     },
     {
-      "type": "html",
-      "id": "custom_icon",
-      "label": "Custom icon (SVG)",
-      "info": "Leave blank to use default wrench icon. Image will take priority if both are provided."
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "HEADING"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Description text goes here."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     },
     {
       "type": "header",
@@ -408,16 +365,6 @@
       "default": "700"
     },
     {
-      "type": "range",
-      "id": "text_size",
-      "min": 12,
-      "max": 20,
-      "step": 1,
-      "unit": "px",
-      "label": "Text size",
-      "default": 14
-    },
-    {
       "type": "header",
       "content": "Button Settings"
     },
@@ -425,7 +372,7 @@
       "type": "range",
       "id": "button_text_size",
       "min": 12,
-      "max": 20,
+      "max": 32,
       "step": 1,
       "unit": "px",
       "label": "Button text size",
@@ -435,7 +382,7 @@
       "type": "range",
       "id": "button_padding_x",
       "min": 16,
-      "max": 48,
+      "max": 128,
       "step": 4,
       "unit": "px",
       "label": "Button horizontal padding",
@@ -444,35 +391,22 @@
     {
       "type": "range",
       "id": "button_padding_y",
-      "min": 8,
-      "max": 24,
-      "step": 2,
+      "min": 0,
+      "max": 128,
+      "step": 4,
       "unit": "px",
       "label": "Button vertical padding",
-      "default": 12
-    },
-    {
-      "type": "range",
-      "id": "button_border_radius",
-      "min": 0,
-      "max": 50,
-      "step": 2,
-      "unit": "px",
-      "label": "Button border radius",
-      "default": 50
+      "default": 0
     },
     {
       "type": "header",
       "content": "Logo Settings"
     },
     {
-      "type": "range",
+      "type": "number",
       "id": "logo_size",
-      "min": 32,
-      "max": 80,
-      "step": 4,
-      "unit": "px",
       "label": "Logo size",
+      "info": "Set the size of the logo in px.",
       "default": 64
     },
     {
@@ -492,12 +426,6 @@
     {
       "type": "header",
       "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "section_background",
-      "label": "Section background",
-      "default": "rgba(0,0,0,0)"
     },
     {
       "type": "color",
