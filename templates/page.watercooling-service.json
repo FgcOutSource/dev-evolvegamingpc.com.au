@@ -17,26 +17,6 @@
         "page_width": "medium"
       }
     },
-    "rich_text_fEikqz": {
-      "type": "rich-text",
-      "disabled": true,
-      "name": "Rich text",
-      "settings": {
-        "subheading": "",
-        "title": "SERVICES",
-        "content": "<p>At Evolve Gaming PC, we do more than just sell prebuilt systems — we offer a full range of <strong>PC services</strong>. From <strong>custom PC building</strong> to <strong>case swaps</strong> for a fresh new look, and even <strong>bring-your-own-parts builds</strong> where we assemble your gear with expert care, our team makes sure your rig is built right the first time.</p>",
-        "button_text": "GIVE US A CALL",
-        "button_link": "",
-        "background_type": "full_width",
-        "text_width": "medium",
-        "text_position": "center",
-        "text_alignment": "center",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)"
-      }
-    },
     "image_with_text_overlay_jFJgQA": {
       "type": "image-with-text-overlay",
       "custom_css": [],
@@ -47,8 +27,8 @@
         "image": "shopify://shop_images/Services-header-1.png",
         "subheading": "",
         "title": "WATERCOOLING SERVICE",
-        "content": "<p>At Evolve Gaming PC, we do more than just sell prebuilt systems — we offer a full range of <strong>PC services</strong>.<br/>From <strong>custom PC building</strong> to <strong>case swaps</strong> for a fresh new look, and even <strong>bring-your-own-parts builds</strong> where we assemble your gear with expert care, our team makes sure your rig is built right the first time.</p>",
-        "button_text": "Give us a call",
+        "content": "<p>Keep your system running at peak performance with our <strong>watercooling pc maintenance services</strong>. From coolant flushes to refills and pump checks, we make sure your PC stays cool, quiet, and reliable all year round.</p>",
+        "button_text": "Team is standing by",
         "button_link": "",
         "link_style": "button",
         "background_type": "full_width",
@@ -145,7 +125,7 @@
             "tab_label": "",
             "subheading": "",
             "title": "Supply & Fill",
-            "content": "<p>Built to perfection, not a cable out of palce. The only place in Sydney to get your PC built perfectly. Everytime.</p>",
+            "content": "<p>We offer <strong>coolant supply and refill services</strong> to keep your water-cooled gaming PC in top shape. Whether it's topping up low fluid, replacing old coolant, or switching to a fresh new colour, our team ensures your loop is properly filled and balanced for maximum cooling performance.</p>",
             "button_text": "Maintain my loop",
             "button_link": ""
           }
@@ -180,7 +160,7 @@
             "tab_label": "",
             "subheading": "",
             "title": "Repasting GPU Blocks",
-            "content": "<p>It's natural to feel uncomfortable building an expensive PC. That's where our PC building servicescome in.</p><p>Get your PC or Gaming PC built with th team on site here within a day!</p>",
+            "content": "<p>GPU not performing as it should?</p><p>Over time, thermal paste on GPU blocks can dry out and lose efficiency. Our <strong>GPU repasting service</strong> restores proper contact between your graphics card and water block, lowering temperatures and extending hardware lifespan for stable, high-performance gaming.</p>",
             "button_text": "Thermal refresh service",
             "button_link": ""
           }
@@ -214,7 +194,7 @@
             "tab_label": "",
             "subheading": "",
             "title": "System flush",
-            "content": "<p>If you've put in all the effort to personalise your PC and you're finding performance a bit sluggish, or some of your components are wearing out, with our repair and upgradfe service we can help breath new life into your existing setup.</p><p>With an affordable, friendly and professional service, you can trust that you pride and joy will be handled in the utmost care.<br/><br/></p>",
+            "content": "<p>A full <strong>system flush</strong> clears out old coolant, residue, and breaks down buildup from your water-cooling loop. We replace it with fresh fluid to restore peak cooling efficiency, prevent blockages, and keep your gaming PC running cool and reliable.</p><p>Pick your colour perhaps change your PC RGB theme while you're at it.</p>",
             "button_text": "Let's get upgrading",
             "button_link": ""
           }
@@ -238,85 +218,41 @@
         "custom_class": "services-image_w_text-image-accent_lines"
       }
     },
-    "image_with_text_hJwxnQ": {
-      "type": "image-with-text",
-      "blocks": {
-        "item_Rtmrpi": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Service-page-4.png",
-            "tab_label": "",
-            "subheading": "",
-            "title": "Case swaps",
-            "content": "<p>Is your PC built for maximum performance, but you're just not happy with the look? With our case swap service we'll get your PC looking as good on the outside as it performs on the inside.</p><p>Take everything out of the old tired case. Let's update to something new, exciting and frash!</p>",
-            "button_text": "Let's get swapping",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_Rtmrpi"
-      ],
-      "name": "Image with text",
+    "image_with_text_style_3_r9PHhw": {
+      "type": "image-with-text-style-3",
+      "name": "Image with text style 3",
       "settings": {
-        "reveal_on_scroll": false,
-        "background_type": "full_width",
-        "background_overlap": "image",
-        "image_position": "left",
-        "text_alignment": "left",
-        "cycle_speed": 20,
-        "accent_background": "rgba(0,0,0,0)",
+        "background_type": "boxed",
+        "tablet_layout": "stacked",
+        "mobile_layout": "vertical",
+        "mobile_button_full_width": true,
+        "image": "shopify://shop_images/Icon-3.png",
+        "heading": "PC MAINTENANCE & REPAIR",
+        "description": "Is your PC not performing the way it should or just needs a once over? From basic repairs through to repasting GPUs, we've got you covered.",
+        "button_text": "Book now",
+        "button_link": "",
+        "heading_size": 28,
+        "heading_weight": "700",
+        "button_text_size": 13,
+        "button_padding_x": 80,
+        "button_padding_y": 0,
+        "logo_size": 120,
+        "section_padding": 16,
         "text_color": "rgba(0,0,0,0)",
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)",
-        "custom_class": "services-image_w_text-image-accent_lines"
-      }
-    },
-    "image_with_text_JeTpMW": {
-      "type": "image-with-text",
-      "blocks": {
-        "item_ihRxTK": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Icon-3.png",
-            "tab_label": "",
-            "subheading": "",
-            "title": "PC MAINTENANCE & REPAIR",
-            "content": "<p>Is your PC not performing the way it should or just needs a once over? From basic repairs through to repasting GPUs, we've got you covered.</p>",
-            "button_text": "Book now",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_ihRxTK"
-      ],
-      "name": "Image with text",
-      "settings": {
-        "reveal_on_scroll": false,
-        "background_type": "full_width",
-        "background_overlap": "image",
-        "image_position": "left",
-        "text_alignment": "left",
-        "cycle_speed": 8,
-        "accent_background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "button_background": "rgba(0,0,0,0)",
-        "button_text_color": "rgba(0,0,0,0)",
-        "custom_class": "services-call_to_action-banner"
+        "custom_class": ""
       }
     }
   },
   "order": [
     "main",
-    "rich_text_fEikqz",
     "image_with_text_overlay_jFJgQA",
     "gallery_custom_6AypQt",
     "featured_collections_WXheJT",
     "image_with_text_pKHBkJ",
     "image_with_text_FjQi7q",
     "image_with_text_zLhmJi",
-    "image_with_text_hJwxnQ",
-    "image_with_text_JeTpMW"
+    "image_with_text_style_3_r9PHhw"
   ]
 }
