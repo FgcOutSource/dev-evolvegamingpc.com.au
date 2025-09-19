@@ -47,7 +47,8 @@
   }
 </style>
 
-<section class="section {% unless blends_with_background or is_boxed %}section--flush{% endunless %}">
+<section class="section {% unless blends_with_background or is_boxed %}section--flush{% endunless %} {{ section.settings.custom_class | escape }} section-{{ section.id }}">
+  
   <div {% if is_boxed %}class="container"{% endif %}>
     <div class="section__color-wrapper {% if is_boxed %}section__color-wrapper--boxed{% endif %}">
       <div class="{% unless is_boxed %}container{% endunless %} {% unless blends_with_background %}vertical-breather{% endunless %}">
@@ -221,7 +222,14 @@
       "id": "button_text_color",
       "label": "Button text",
       "default": "rgba(0,0,0,0)"
-    }
+    },
+    {
+  "type": "text",
+  "id": "custom_class",
+  "label": "Custom CSS class",
+  "info": "Nhập 1 hoặc nhiều class, cách nhau bằng dấu cách (vd: home-rtx hero-dark py-0)"
+}
+
   ],
   "presets": [
     {

@@ -160,8 +160,8 @@ ul.mobile-nav.list--unstyled.vertical-mega-menu
   li:hover
   > a,
 .header ul.mm-submenu.tree.mm-last-level li:hover a + a {
-  color: rgb(120, 8, 255) !important;
-  color: #fff !important;
+  /* color: rgb(120, 8, 255) !important; */
+  /* color: #fff !important; */
 }
 .header ul.mm-submenu.tree.mm-last-level li a + a {
   font-weight: 700 !important;
@@ -198,7 +198,9 @@ ul.mobile-nav.list--unstyled.vertical-mega-menu
   place-items: center;
   align-items: center;
   justify-content: center;
-  padding-top: 20px !important;
+  /* padding-top: 20px !important; */
+  /* height: 270px !important; */
+  overflow: hidden !important;
 }
 .horizontal-mega-menu .buddha-menu-item .mm-submenu.tree.medium > li {
   max-width: 305px !important;

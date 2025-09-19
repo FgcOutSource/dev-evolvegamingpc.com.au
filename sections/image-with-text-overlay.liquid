@@ -48,7 +48,7 @@
   }
 </style>
 
-<section class="section {% unless is_boxed %}section--flush{% endunless %}">
+<section class="section {{ section.settings.custom_class }} {% unless is_boxed %}section--flush{% endunless %}">
   <div {% if is_boxed %}class="container"{% endif %}>
     {%- assign image = section.settings.image -%}
     {%- assign image_aspect_ratio = image.aspect_ratio | default: 2.63 -%}
@@ -290,6 +290,12 @@
         }
       ],
       "default": "middle_center"
+    },
+    {
+    "type": "text",
+    "id": "custom_class",
+    "label": "Custom CSS class (optional)",
+    "default": "custom-class"
     },
     {
       "type": "header",
